@@ -1,5 +1,7 @@
-[我的GitHub Page首頁](https://github.com/linyign/linyign.github.io)
+[我的GitHub Page首頁](https://linyign.github.io/index.html)
 
+markdown 語法規則
+===
 
 # h1
 ## h2
