@@ -1,4 +1,8 @@
-.first1{
+*{
+    margin: 0;
+    padding: 0;
+}
+.enter{
     width: 100%;
     background-color: rgb(14, 3, 44);
     display: flex;
@@ -14,7 +18,7 @@
     color: aliceblue;
     margin: 10px;
 }
-div.first1 a{
+div.enter a{
     color: aliceblue;
     margin: 10px;
     text-decoration: none;
@@ -74,6 +78,15 @@ div.first1 a{
     padding: 100px 0px 50px 20px;
     justify-content: center;
     align-items: center;
+}
+.row .txt h1{
+    color: #fff;
+}
+.txt span{
+    color: green;
+}
+.row .txt h2{
+    color: #fff;
 }
 .row .txt input{
     border-width: 0 0 1px;
@@ -143,12 +156,14 @@ div.first1 a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
-.function h1{
-    display: flex;
+.function h2{
+    width: 100%;
     flex-wrap: wrap;
     text-align: center;
-    padding: 30px 120px 30px;
+    padding: 30px 0px;
+
 }
 .function .serve{
     width: 1350px;
@@ -165,7 +180,6 @@ div.first1 a{
     background-color: #fff;
     border-radius: 30%; 
     text-align: center;
-
 }
 .inserve h3{
     padding: 10px 120px;
@@ -179,6 +193,7 @@ div.first1 a{
     display: flex;
     flex-wrap: wrap;
     padding: 30px 35px 0px;
+    margin: auto;
 }
 .recommend{
     display: flex;
@@ -186,7 +201,7 @@ div.first1 a{
     text-align: center;
     border-bottom: 1px solid grey;
 }
-.recommend h1{
+.recommend h2{
     width: 1110px;
     padding: 0px 120px 30px;
     text-align: center;
@@ -227,18 +242,17 @@ div.first1 a{
 }
 .end{
     width: 100%;
-    background-color: #172B4D;
+    height: 490px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    background:#032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
 }
 .footp{
-    width: 770px;
+    width: 1350px;
     color: aliceblue;
-    justify-content: center;
     font-size: 40px;
-    padding: 10px 0px 10px 40px;
-    margin: 10px;
+    margin: auto;
 }
 .footp li{
     background-color: rgb(18, 61, 250);
@@ -253,121 +267,89 @@ div.first1 a{
     margin-top: 40px;
     margin-left: 40px;   
 }
-.end{
-    width: 100%;
-    background-color: #172B4D;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+.section{
+background-color: #0f1b31;
 }
-.footp{
-    width: 770px;
-    color: aliceblue;
-    justify-content: center;
-    font-size: 40px;
-    padding: 10px 0px 10px 40px;
-    margin: 10px;
+.footerwrap{
+width: 100%;
+height: auto;
+background-color: #0f1b31;
+margin: auto;
+display: flex;
+justify-content: center;
 }
-.footp li{
-    background-color: rgb(18, 61, 250);
-    list-style: none;
-    display: inline-block;
-    font-size: 17px;
-    padding: 10px 100px;
-    border-radius: 30px; 
+.footerlist{
+width: 1350px;
+border-top: 1px solid grey;
+margin-top: 20px;
+display: flex;
+color: white;
+justify-content: space-between;
 }
-.footimg img{
-    width: 100%;
-    margin-top: 40px;
-    margin-left: 40px;   
+.footerlist ul{
+list-style: none;
 }
-.footer{
-    width: 100%;
-    background-color: #0f1b31;
-    color: azure;
-    justify-content: center;
-    padding: 80px  0px 50px;
-    display: flex;
-    flex-wrap: wrap;
+.footerlist a{
+text-decoration: none;
+color: white;
+line-height: 30px;
 }
 .footercol{
-    width: 150px;
-    border-top: 1px solid grey;
+width: 150px;
 }
 .footercol h4, .footercolspecial h4{
-    padding-left: 10px;
-}
-.footercol ul, .footercolspecial ul{
-    padding-left: 10px;
-    
-}
-.footercol li, .footercolspecial  li{
-    list-style: none;
-}
-.footercol a, .footercolspecial a{
-    text-decoration: none;
-    font-size: 15px;
-    line-height: 30px;
-    color: rgb(248, 248, 244);
+margin-bottom: 20px;
+margin-top: 20px;
 }
 .footercolspecial{
-    width: 250px;
-    border-top: 1px solid grey;
+width: 250px;
 }
 .C19{
-    width: 1350px;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+width: 100%;
+background-color: #0f1b31;
+margin-bottom: 10px;
 }
-.C19 .COVID-19{
-    background-color: #dbf8ed;
-    padding: 5px;
-    display: inline-block;
-    width: 225px;
-    text-align: center;
+.COVID-19{
+width: 1350px;
+background-color: #0f1b31;
+margin: auto;
+display: flex;
+justify-content: flex-end;
 }
 .COVID-19 a{
-    text-decoration: none;
-    color: black;
+color: #000000;
+text-decoration: none;
+background-color: #dbf8ed;
+padding: 20px 40px;
 }
 .footerbom{
-    width: 1350px;
+    width: 100%;
     margin: auto;
-    border-top: 1px solid gray;
-    background-color: #0f1b31;
     display: flex;
     flex-wrap: wrap;
+    background-color: #0f1b31;
+    justify-content: center;
 }
 .copy{
-    width: 410px;
-    padding: 10px;
-}
-.copy li{
-    color: azure;
-    list-style: none;
+    width: 450px;
+    color: white;
     display: flex;
-    flex-wrap: wrap;
-    display: inline-block;
-    font-size: 15px;
-}
-.private{
-    padding-left: 5px;
-    border-left: 1px solid white;
-    margin-left: 10px;
-}
-.copy img{
-    display: inline-block;
-    justify-content: center;
     align-items: center;
 }
-.copy p{
-
+.copy ul{
+    display: inline-block;
+    justify-content: center;
+}
+.copy li{
+    list-style: none;
+    display: inline-block;
+}
+.copyimg{
+    width: 450px;
+}
+.copyp{
+    width: 450px;
     color: white;
-    margin-bottom: 0px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
 }
