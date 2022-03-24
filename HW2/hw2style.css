@@ -59,7 +59,7 @@ div.enter a{
     margin-left: 400px;
     border-radius: 30px; 
 } 
-.group{
+.banner{
     width: 100%;
 }
 .row{
@@ -80,7 +80,6 @@ div.enter a{
     width: 100%;
     margin: auto;
 
-    /* padding: 100px 0px 50px 20px; */
 }
 .row .txt{
     width: 640px;
@@ -95,16 +94,16 @@ div.enter a{
 .txt span{
     color: green;
 }
-.row .txt h2{
+.row .txt p{
     color: #fff;
+    font-size: 20px;
 }
 .row .txt input{
-    border-width: 0 0 1px;
     width: 350px;
     height: 30px;
     color: white;
     border: none;
-    border-bottom-style: solid;
+    border-bottom: 1px solid white;
     background-color: rgb(14, 3, 44);
     margin-top: 10px;
     margin-right: 10px;
@@ -276,10 +275,12 @@ div.enter a{
     padding-bottom: 50px;
     font-size: 20px;
 }
-.inshow h3{
-    display: inline-block;
-
-    padding-top: 30px;
+.inshow .represent{
+    display: block;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 100px;
+    /* padding-top: 30px; */
 }
 .inshow img{
     width: 100%;
@@ -359,7 +360,8 @@ div.enter a{
 .C19{
     width: 100%;
     background-color: #0f1b31;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
 }
 .COVID-19{
     width: 1350px;
