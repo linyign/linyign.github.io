@@ -1,0 +1,146 @@
+.catalog{
+    width: auto;
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.contain{
+    width: 695px;
+    position: relative;
+    margin: 100px 0px;
+    
+}
+.pic{
+    width: 695px;  
+}
+.pic::after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -60px;
+    right: -5px;
+    border-top: 60px solid #eee;
+    border-right: 54px solid #eee;
+}
+.chapter{
+    width: 400px;
+    position: absolute;
+    top: -80px;
+    left: -150px;
+}
+.subsection{
+    width: 400px;
+    background-color: #f00;
+    display: flex;
+    flex-wrap: wrap;
+}
+.subsection span{
+    font-size: 50px;
+    color: #fff;
+    writing-mode: vertical-lr;
+    padding-top: 10px;
+}
+
+.subsection h1{
+    width: 250px;
+    color: #fff;
+    font-size: 40px;
+    padding-top: 20px;
+}
+.subsectiontxt{
+    width: 400px;
+    background-color: #000;
+    display: block;
+}
+.subsectiontxt h2{
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+.subsectiontxt p{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 30px;
+}
+.txt{
+    width: 640px;
+    background-color: #ccc;
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    left: -120px;
+
+}
+.txt p{
+    color: red;
+    padding: 10px;
+    line-height: 20px;
+}
+.txt h3{
+    font-size: 15px;
+    display: inline-block;
+    background-color: #000;
+    /* border: 2px solid #000; */
+    color: #fff;
+    padding: 5px ;
+    margin-left: 10px;
+}
+.txt .incontent{
+    color: #000;
+}
+.txt i{
+    color: #f00;
+}
+.chapter-even{
+    width: 400px;
+    position: absolute;
+    top: -80px;
+    right: 0px;
+}
+.txt-even{
+    width: 640px;
+    background-color: #ccc;
+    margin: auto;
+    position: absolute;
+    bottom: -100px;
+    right: 0px;
+
+}
+.txt-even p{
+    color: #f00;
+    padding: 10px;
+    line-height: 20px;
+}
+.txt-even h3{
+    font-size: 15px;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 5px ;
+    margin-left: 10px;
+}
+.txt-even .incontent{
+    color: #000;
+}
+.txt-even i{
+    color: #f00;
+}
+.pic-even{
+    width: 695px;  
+    position: relative;
+    top: 0;
+    right: 15%;
+}
+.pic-even::after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -57px;
+    right: -50px;
+    border-top: 60px solid #eee;
+    border-right: 54px solid #eee;
+}
