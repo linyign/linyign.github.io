@@ -1,0 +1,30 @@
+.myself{
+    width: 960px;
+    margin: auto;
+    border: 1px solid #000;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(197, 238, 240, 0.889);
+}
+.txt{
+    background-color: rgba(197, 238, 240, 0.589);
+}
+.txt h2{
+    color: #000;
+    font-weight:bold;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+.txt p{
+    font-size: 17px;
+    padding:  10px 20px;
+}
+.idol{
+    width: 960px;
+    height: 200px;
+    background-color: rgba(197, 238, 240, 0.289);
+    display: flex;
+    justify-content: space-evenly;
+}

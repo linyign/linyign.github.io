@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="introduction.css">
+</head>
+<body>
+    <div class="myself">
+        <div class="img">
+            <img id="pic" src="images.png" alt="">
+        </div>
+        <div class="txt">
+            <h2>姓名:</h2>
+            <p id="name"></p>
+            <h2>Email:</h2>
+            <p id="email"></p>
+            <h2>學校:</h2>
+            <p id="school"></p>
+            <h2>興趣:</h2>
+            <p id="interest"></p>
+        </div>
+        <div class="idol">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        let introduction=["林盈均","Example@gmail.com","中華大學","追劇"];
+        document.getElementById("name").innerText=`${introduction[0]}`;
+        document.getElementById("email").innerText=`${introduction[1]}`;
+        document.getElementById("school").innerText=`${introduction[2]}`;
+        document.getElementById("interest").innerText=`${introduction[3]}`;
+
+        let idol=document.querySelectorAll(".idol .img");
+        const imgArray=[
+            "https://lineimg.omusic.com.tw/img/artist/13.jpg?v=20220121111513 width=200px height=200px",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPBpey4nIzGBIhUVk_A85CthL_mmyO-Nwoo4GsHhfXakrtiYn34xoPlD4PVRQ-hF15uUg&usqp=CAU width=200px height=200px",
+            "momamoo.png",
+        ]
+        imgArray.forEach((url, index)=>{
+            idol[index].setAttribute("src",imgArray[index])
+        });
+    </script>
+</body>
+</html>
