@@ -1,145 +1,135 @@
-.catalog{
-    width: auto;
-    margin: 100px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+
+section{
+    width: 960px;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding: 50px 0px;
 }
-.contain{
-    width: 695px;
+.chapter{
+    width: 320px;
     position: relative;
-    margin: 100px 0px;
-    
+}
+section:nth-of-type(even) .chapter{
+    margin-left: auto;
+    margin-right: 70px;
+}
+.chapter-title{
+    background-color: #f00;
+    color: #fff;
+}
+section:nth-of-type(even) .chapter-title{
+    margin-left: auto;
+}
+.chapter-title span{
+    writing-mode: vertical-lr;
+    vertical-align: middle;
+    font-size: 120px;
+}
+.chapter-title h2{
+    vertical-align: middle;
+    font-size: 40px;
+}
+.chapter-txt{
+    background-color: #000;
+    color: #fff;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+}
+.chapter-txt h3{
+    padding-bottom: 10px;
+}
+.chapter-txt p{
+    line-height: 1.5em;
 }
 .pic{
-    width: 695px;  
+    width: 680px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 160px;
+}
+section:nth-of-type(even) .pic {
+    margin-left: 0;
+    flex-direction: row-reverse;
 }
 .pic::after{
     content: '';
-    width: 300px;
+    width: 400px;
     height: 300px;
+    background-color: #ccc;
     position: absolute;
     top: -60px;
-    right: -52px;
-    border-top: 60px solid #eee;
-    border-right: 54px solid #eee;
+    right: -50px;
+    z-index: -1;
 }
-.chapter{
-    width: 400px;
-    position: absolute;
-    top: -80px;
-    left: -150px;
+section:nth-of-type(even) .pic::after {
+    top: -70px;
+    right: -100px;
 }
-.subsection{
-    width: 400px;
-    background-color: #f00;
-    display: flex;
-    flex-wrap: wrap;
+.pic .main-pic {
+    width: 695px;
+    margin-right: -30px;
 }
-.subsection span{
-    font-size: 50px;
-    color: #fff;
-    writing-mode: vertical-lr;
-    padding-top: 10px;
+section:nth-of-type(even) .pic .main-pic{
+    margin-left: -50px;
+}
+.pic .btn {
+    width: 70px;
 }
 
-.subsection h1{
-    width: 250px;
-    color: #fff;
-    font-size: 40px;
-    padding-top: 20px;
+.main-pic img, .btn img{
+    width: 100%;
+    vertical-align: middle;
 }
-.subsectiontxt{
-    width: 400px;
-    background-color: #000;
-    display: block;
-}
-.subsectiontxt h2{
-    color: #fff;
-    font-size: 20px;
-    padding: 20px 10px;
-}
-.subsectiontxt p{
-    color: #fff;
-    font-size: 20px;
-    padding: 10px;
-    line-height: 30px;
-}
-.txt{
-    width: 640px;
-    background-color: #ccc;
-    margin: auto;
-    position: absolute;
-    top: 70%;
-    left: -120px;
 
-}
-.txt p{
-    color: red;
-    padding: 10px;
-    line-height: 20px;
-}
-.txt h3{
-    font-size: 15px;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 5px ;
-    margin-left: 10px;
-}
-.txt .incontent{
-    color: #000;
-}
-.txt i{
-    color: #f00;
-}
-.chapter-even{
-    width: 400px;
-    position: absolute;
-    top: -80px;
-    right: 0px;
-}
-.txt-even{
-    width: 640px;
-    background-color: #ccc;
-    margin: auto;
-    position: absolute;
-    bottom: -100px;
-    right: 0px;
-
-}
-.txt-even p{
-    color: #f00;
-    padding: 10px;
-    line-height: 20px;
-}
-.txt-even h3{
-    font-size: 15px;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 5px ;
-    margin-left: 10px;
-}
-.txt-even .incontent{
-    color: #000;
-}
-.txt-even i{
-    color: #f00;
-}
-.pic-even{
-    width: 695px;  
+.innovation{
+    /* border: 1px solid red; */
+    width: 680px;
+    background-color: #ddd;
+    padding: 20px;
     position: relative;
-    top: 0;
-    right: 15%;
+    top: -30px;
+    left: 20px;
 }
-.pic-even::after{
+section:nth-of-type(even) .innovation{
+    margin-left: auto;
+    margin-right: 40px;
+}
+.innovation .slg{
+    color: #f00;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.innovation .slg::after{
     content: '';
-    width: 300px;
-    height: 300px;
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-left: 1em;
+    background-color: #f00;
+    flex-grow: 1;
+}
+.innovation h4{
+    background-color: #000;
+    width: fit-content;
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    margin: 5px;
+}
+.innovation p{
+    padding-left: 2em;
+    position: relative;
+}
+.innovation p::before{
+    content: '';
     position: absolute;
-    top: -57px;
-    right: -54px;
-    border-top: 60px solid #eee;
-    border-right: 54px solid #eee;
+    width: 4px;
+    height: 4px;
+    background: #f00;
+    border-radius:100% ;
+    left: 1em;
+    top: 0.5em;
 }
