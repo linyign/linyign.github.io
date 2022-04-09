@@ -1,28 +1,27 @@
-#menu-control{
+#menu-control ,#menu-control ~ header .start-business{
     display: none;
 }
 #menu-control:checked ~ header .about{
     display: block;
     height: calc(100% - 106px);
 } 
+#menu-control:checked ~ header .start-business{
+    width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #00142D;
+        color: #fff;
+        padding: 20px;
+        margin: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+}
 #menu-control:checked ~ section, #menu-control:checked ~.main-txt,#menu-control:checked ~ .function,#menu-control:checked ~ .brand ,#menu-control:checked ~ .asia ,#menu-control:checked ~ .more-infro{
     display: none;
 }
-@media screen and (min-width:768px){
-    .col-md-1{width: 8.333333%;}
-    .col-md-2{width: 16.666666%;}
-    .col-md-3{width: 25%;}
-    .col-md-4{width: 33.333333%;}
-    .col-md-5{width: 41.666666%;}
-    .col-md-6{width: 50%;}
-    .col-md-7{width: 58.333333%;}
-    .col-md-8{width: 66.666666%;}
-    .col-md-9{width: 75%;}
-    .col-md-10{width: 83.333333%;}
-    .col-md-11{width: 91.666666%;}
-    .col-md-12{width: 100%;}
-}
-@media screen and (max-width:767px){
+@media screen and (max-width:991px){
     header{
         width: 100%;
         margin: auto;
@@ -30,6 +29,12 @@
         justify-content: space-between;
         position: fixed;
         background-color: #fff;
+    }
+    .main-header{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
     }
     .logo {
         width: 50%;
@@ -87,9 +92,6 @@
     .free-try a, .sign-in a{
         color: #fff;
         background-color: #00f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 10px 50px;
         margin: auto;
         text-decoration: none;
@@ -99,19 +101,6 @@
         border: 2px solid #00f;
         color: #00f;
         background-color: #fff;
-    }
-    .start-business{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        background-color: #00142D;
-        color: #fff;
-        padding: 20px;
-        margin: auto;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        box-sizing: border-box;
     }
     section{
         width: 100%;
@@ -123,7 +112,6 @@
         margin: auto;
     }
     .pic img{
-        /* width: 320px; */
         width: 100%;
         display: flex;
         padding: 20px 0px ;
@@ -315,7 +303,6 @@
         width: 100%;
         background:#032249 ;
         margin: auto;
-        position: relative;
     }
     .asia-txt .txt p{
         color: #fff;
@@ -430,11 +417,8 @@
         text-align: center;
     }
 }
-@media screen and (min-width:1200px){
-    .hb{
-        display: none;
-    }
-    .about .start-business , #menu-control , .btn,.start-business, .dot,.asia-txt img{
+@media screen and (min-width:992px) {
+    .hb,.about .start-business , #menu-control , .btn,.start-business, .dot,.asia-txt img{
         display: none;
     }
     .enter{
@@ -448,12 +432,12 @@
         flex-wrap: wrap;   
     }
     .sign{
-        width: 1350px;
+        width: 100%;
+        height: 40px;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        
     }
     .sign i {
         color: aliceblue;
@@ -465,19 +449,23 @@
     }
     header{
         width: 100%;
+        margin: auto;
+    }
+    .main-header{
+        width: 100%;
+        margin: auto;
         background-color: rgb(247, 247, 247);
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 1350px;
-        margin: auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .logo{
+        width: 160px;
+        padding-left: 30px;
     }
     header img{
-        width: 160px;
+        width: 100%;
     }
     .about nav a{
         text-decoration: none;
@@ -490,49 +478,53 @@
         background-color: rgba(88, 103, 241, 0.966);
         align-items: center;
         padding: 10px;
-        margin-left: 400px;
+        margin-left: 20px;
         border-radius: 30px; 
     } 
     section{
+        width: 100%;
+        margin: auto;
+        background-color: rgb(14, 3, 44);
+    }
+    .main-section{
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         margin: auto;
         justify-content: center;
-        background-color: rgb(14, 3, 44);
     }
     section .pic{
-        width: 675px;
+        width: 50%;
+        margin: auto;
         justify-content: center;
         align-items: center;
     }
     section .pic img{
         width: 100%;
-        padding: -5px;
         margin: auto;
     }
     section .txt{
-        width: 625px;
+        width: calc(50% - 80px);
         margin: 30px;
         padding: 100px 0px 50px 20px;
         justify-content: center;
         align-items: center;
     }
-    .txt h2{
+    section .txt h2{
         font-size: 28px;
         line-height: 1.5em;
         color: #fff;
     }
-    .txt span{
+    section .txt span{
         color: green;
     }
-    .txt p{
+    section .txt p{
         color: #fff;
         line-height: 1.5em;
         font-size: 20px;
     }
-    .txt input{
+    section .txt input{
         width: 350px;
         height: 30px;
         color: white;
@@ -542,7 +534,7 @@
         margin-top: 10px;
         margin-right: 10px;
     }
-    .txt button{
+    section .txt button{
         text-decoration: none;
         background-color: rgba(88, 103, 241, 0.966);
         color: black;
@@ -555,32 +547,29 @@
         padding-top:50px ;
     }
     .title{
-        width: 1350px;
+        width: 100%;
         margin: auto;
         margin-top: 50px;
         margin-bottom: 120px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
         flex-wrap: wrap;
-    
     }
     .title h2{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+        width: 450px;
+        margin: auto;
         font-size: 35px;
+        text-align: center;
         line-height: 1.5em;
         margin-bottom: 20px;
     }
     .title p{
-        width: 50%;
+        width: 450px;
+        margin: auto;
+        text-align: center;
         font-size: 17px;
         line-height: 1.5em;
     }
     .inrow{
-        width: 1350px;
+        width: 992px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -593,15 +582,16 @@
         flex-direction: row-reverse;
     }
     .intxt .pic{
-        width: 655px;
-        padding: 10px;
+        width: 50%;
+        margin: auto;
     }
     .intxt .pic img{
         width: 100%;
         height: auto;
     }
     .intxt .txt{
-        width: 655px;
+        width: calc(60% - 30px);
+        padding: 10px 10px 30px ;
     }
     .intxt h3{
         font-size: 35px;
@@ -615,15 +605,16 @@
         margin-bottom: 30px;
     }
     .intxt ul{
-        width: 600px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
     .intxt li{
-        width: 300px;
+        width: 50%;
         flex-wrap: wrap;
         font-size: 20px;
+        line-height: 1.5em;
         padding-bottom: 15px;
     }
     .intxt i{
@@ -652,39 +643,43 @@
         padding: 30px 0px;
     }
     .function .serve{
-        width: 1350px;
+        width: 992px;
         display: flex;
         margin: auto;
         flex-wrap: wrap;
     }
     .serve .inserve{
-        width: 450px;
+        width: calc(100% /3);
     }
     .inserve img{
-        padding: 10px 10px;
-        margin: 10px 130px;
+        width: calc(100%/3);
+        margin: auto;
         background-color: #fff;
         border-radius: 30%; 
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .inserve h3{
         font-size: 25px;
-        padding: 10px 110px;
+        margin: auto;
+        text-align: center;
+        padding: 20px 0px;
     }
     .inserve .inp{
-        width: 447px;
-        margin: auto;
+        width: calc(100% - 60px);
+        padding: 0px 30px;
         font-size: 22px;
         line-height: 1.5em;
     }
     .brand{
-        width: 1350px;
+        width: 992px;
         display: flex;
         flex-wrap: wrap;
-        /* padding: 30px 35px 0px; */
         margin: auto;
     }
     .recommend{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
@@ -692,24 +687,24 @@
     }
     .recommend h2{
         font-size: 30px;
-        width: 1110px;
+        width: 100%;
         margin: auto;
-        padding: 30px 120px 30px;
+        padding: 20px 0px ;
         text-align: center;
     }
     .recommend .brand-pic{
-        width: 270px;
+        width: calc(100%/5);
         text-align: center;
     }
     .pop{
-        width: 1350px;
+        width: 992px;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
     }
     .inshow{
-        width: 615px;
+        width: calc(50% - 60px);
         padding: 10px;
         margin: 20px;
         text-align: left;
@@ -745,16 +740,16 @@
         justify-content: center;
     }
     .asia-txt{
-        width: 1350px;
+        width: 992px;
         display: flex;
         justify-content: flex-end;
         background:#032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
     }
     .asia-txt .txt{
-        width: 1350px;
+        width: calc(100% - 60px);
         color: aliceblue;
         font-size: 40px;
-        margin: auto;
+        margin: auto 30px;
     }
     .asia-txt .txt p{
         color: #fff;
@@ -775,15 +770,15 @@
         background-color: #0f1b31;
     }
     .footerwrap{
-        width: 100%;
+        width: calc(100% - 60px);
         height: auto;
         background-color: #0f1b31;
-        margin: auto;
+        margin: auto 30px;
         display: flex;
         justify-content: center;
     }
     .footer{
-        width: 1350px;
+        width: 992px;
         border-top: 1px solid grey;
         margin-top: 20px;
         display: flex;
@@ -799,14 +794,16 @@
         line-height: 30px;
     }
     .footercol{
-        width: 150px;
+        width: calc(100%/7 - 10px);
+        padding-left: 10px;
     }
     .footercol h3, .footercolspecial h3{
         margin-bottom: 20px;
         margin-top: 20px;
     }
     .footercolspecial{
-        width: 250px;
+        width: calc(100%/7 - 10px);
+        padding-left: 10px;
     }
     .C19{
         width: 100%;
@@ -814,7 +811,7 @@
         padding-bottom: 10px;
     }
     .COVID-19{
-        width: 1350px;
+        width: 992px;
         background-color: #0f1b31;
         margin: auto;
         display: flex;
@@ -824,10 +821,10 @@
         color: #000000;
         text-decoration: none;
         background-color: #dbf8ed;
-        padding: 20px 40px;
+        padding: 20px ;
     }
     .footerbom{
-        width: 100%;
+        width: 992px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -835,7 +832,7 @@
         justify-content: center;
     }
     .copy-img, .copy-ul ,.copy-p{
-        width: 450px;
+        width: 400px;
         color: white;
         display: flex;
         align-items: center;
@@ -851,17 +848,434 @@
         list-style: none;
         display: inline-block;
     }
-    .copy-img{
-        width: 450px;
+}
+
+@media screen and (min-width:1200px){
+    .hb,.about .start-business , #menu-control , .btn,.start-business, .dot,.asia-txt img{
+        display: none;
     }
-    .copy-p{
-        width: 450px;
+    .enter{
+        width: 100%;
+        background-color: rgb(14, 3, 44);
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;   
+    }
+    .sign{
+        width: 1200px;
+        height: 40px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .sign i {
+        color: aliceblue;
+        margin-right: 10px;
+    }
+    .enter a{
+        color: aliceblue;
+        text-decoration: none;
+    }
+    header{
+        width: 100%;
+        margin: auto;
+    }
+    .main-header{
+        width: 1200px;
+        margin: auto;
+        background-color: rgb(247, 247, 247);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .logo{
+        padding-left: 30px;
+    }
+    header img{
+        width: 100%;
+    }
+    .about nav a{
+        text-decoration: none;
+        align-items: center;
+        padding: 10px;
+        color: black;
+    }
+    .about a.freeTry{
+        text-decoration: none;
+        background-color: rgba(88, 103, 241, 0.966);
+        align-items: center;
+        padding: 10px;
+        margin-left: 200px;
+        border-radius: 30px; 
+    } 
+    section{
+        width: 100%;
+        margin: auto;
+        background-color: rgb(14, 3, 44);
+    }
+    .main-section{
+        width: 1200px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+    section .pic{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    section .pic img{
+        width: 100%;
+        margin: auto;
+    }
+    section .txt{
+        width: calc(50% - 80px);
+        margin: 30px;
+        padding: 100px 0px 50px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    section .txt h2{
+        font-size: 28px;
+        line-height: 1.5em;
+        color: #fff;
+    }
+    section .txt span{
+        color: green;
+    }
+    section .txt p{
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 20px;
+    }
+    section .txt input{
+        width: 350px;
+        height: 30px;
         color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: rgb(14, 3, 44);
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    section .txt button{
+        text-decoration: none;
+        background-color: rgba(88, 103, 241, 0.966);
+        color: black;
+        align-items: center;
+        padding: 10px;
+        border-radius: 30px; 
+    }
+    .main-txt{
+        width: 100%;
+        padding-top:50px ;
+    }
+    .title{
+        width: 100%;
+        margin: 50px auto 120px ;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .title h2{
+        width: 450px;
+        margin: auto;
+        font-size: 35px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+    .title p{
+        width: 450px;
+        margin: auto;
+        font-size: 17px;
+        line-height: 1.5em;
+    }
+    .inrow{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .intxt{
+        display: flex;
+        margin-bottom: 40px;
+    }
+    .intxt:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .intxt .pic{
+        width: calc(50% - 20px);
+        padding: 10px;
+        margin: auto;
+    }
+    .intxt .pic img{
+        width: 100%;
+        height: auto;
+    }
+    .intxt .txt{
+        width: calc(50% - 60px);
+        padding: 10px 30px;
+    }
+    .intxt h3{
+        font-size: 35px;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+    }
+    .intxt p{
+        line-height: 1.5em;
+        font-size: 20px;
+        color: #000;
+        margin-bottom: 30px;
+    }
+    .intxt ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    .intxt li{
+        width: 50%;
+        flex-wrap: wrap;
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+    .intxt i{
+        color: aqua;
+    }
+    .intxt a{
+        font-size: 25px;
+        color: blue;
+        text-decoration: none;
+    }
+    .function {
+        background-color: #f4f5f7;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .function h2{
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 35px;
+        padding: 30px 0px;
+    }
+    .function .serve{
+        width: 1200px;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .serve .inserve{
+        width: calc(100% /3);
+    }
+    .inserve img{
+        width: calc(100%/3);
+        margin: auto;
+        background-color: #fff;
+        border-radius: 30%; 
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .logo img{
-        width: 160px;
+    .inserve h3{
+        font-size: 25px;
+        margin: auto;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .inserve .inp{
+        width: calc(100% - 60px);
+        padding: 0px 30px;
+        font-size: 22px;
+        line-height: 1.5em;
+    }
+    .brand{
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .recommend{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        border-bottom: 1px solid grey;
+    }
+    .recommend h2{
+        font-size: 30px;
+        width: 100%;
+        margin: auto;
+        padding: 20px 0px ;
+        text-align: center;
+    }
+    .recommend .brand-pic{
+        width: calc(100%/5);
+        text-align: center;
+    }
+    .pop{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+    .inshow{
+        width: calc(50% - 60px);
+        padding: 10px;
+        margin: 20px;
+        text-align: left;
+    }
+    .inshow a{
+        text-decoration: none;
+        color: #00f;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .inshow p{
+        padding-top: 10px;
+        padding-bottom: 50px;
+        font-size: 20px;
+        line-height: 2em;
+    }
+    .inshow span{
+        display: block;
+        font-size: 20px;
+        color: #000000;
+        margin-top: 60px;
+    }
+    .inshow img{
+        width: 100%;
+    }
+    .asia{
+        width: 100%;
+        height: 490px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #032249;
+        justify-content: center;
+    }
+    .asia-txt{
+        /* width: 1350px; */
+        width: 1200px;
+        display: flex;
+        justify-content: flex-end;
+        background:#032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
+    }
+    .asia-txt .txt{
+        width: calc(100% - 60px);
+        color: aliceblue;
+        font-size: 40px;
+        margin: auto 30px;
+    }
+    .asia-txt .txt p{
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .asia-txt .txt button{
+        background-color: rgb(18, 61, 250);
+        color: #fff;
+        list-style: none;
+        display: inline-block;
+        font-size: 17px;
+        padding: 10px 100px;
+        border-radius: 30px; 
+    }
+    .more-infro{
+        background-color: #0f1b31;
+    }
+    .footerwrap{
+        width: calc(100% - 60px);
+        height: auto;
+        background-color: #0f1b31;
+        margin: auto 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .footer{
+        width: 1200px;
+        border-top: 1px solid grey;
+        margin-top: 20px;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+    }
+    .footercol ul,.footercolspecial ul{
+        list-style: none;
+    }
+    .footercol a, .footercolspecial a{
+        text-decoration: none;
+        color: white;
+        line-height: 30px;
+    }
+    .footercol{
+        width: calc(100%/7 - 10px);
+        padding-left: 10px;
+    }
+    .footercol h3, .footercolspecial h3{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .footercolspecial{
+        width: calc(100%/7 - 10px);
+        padding-left: 10px;
+    }
+    .C19{
+        width: 100%;
+        background-color: #0f1b31;
+        padding-bottom: 10px;
+    }
+    .COVID-19{
+        width: 1200px;
+        background-color: #0f1b31;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        /* justify-content: end; */
+    }
+    .COVID-19 a{
+        color: #000000;
+        text-decoration: none;
+        background-color: #dbf8ed;
+        padding: 20px ;
+    }
+    .footerbom{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #0f1b31;
+        justify-content: center;
+    }
+    .copy-img, .copy-ul ,.copy-p{
+        width: 400px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .copy-ul{
+        order: -1;
+    }
+    .copy-ul ul{
+        display: inline-block;
+        justify-content: center;
+    }
+    .copy-ul li{
+        list-style: none;
+        display: inline-block;
     }
 }
