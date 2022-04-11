@@ -1,12 +1,543 @@
-#menu-control ,#menu-control ~ header .start-business{
-    display: none;
-}
-#menu-control:checked ~ header .about{
-    display: block;
-    height: calc(100% - 106px);
-} 
-#menu-control:checked ~ header .start-business{
-    width: 100%;
+.hb, 
+    .about .start-business,
+    #menu-control,
+    .btn,
+    .start-business,
+    .asia-txt img {
+        display: none;
+    }
+
+    #menu-control,  #menu-control~header .start-business,    #footer_SHOPLINE,    #footer_OpenShop,    #footer_Function,
+    #footer_Resource,    #footer_Soultion,    #footer_OtherResource,    #footer_Application {
+        display: none;
+    }
+
+    .enter {
+        width: 100%;
+        background-color: rgb(14, 3, 44);
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .sign {
+        width: 100%;
+        height: 40px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .sign i {
+        color: aliceblue;
+        margin-right: 10px;
+    }
+
+    .enter a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+
+    header {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main-header {
+        width: 100%;
+        margin: auto;
+        background-color: rgb(247, 247, 247);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 160px;
+        padding-left: 30px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .about nav a {
+        text-decoration: none;
+        align-items: center;
+        padding: 5px;
+        color: black;
+    }
+
+    .about a.freeTry {
+        text-decoration: none;
+        background-color: rgba(88, 103, 241, 0.966);
+        align-items: center;
+        padding: 10px;
+        margin-left: 20px;
+        border-radius: 30px;
+    }
+
+    section {
+        width: 100%;
+        margin: auto;
+        background-color: rgb(14, 3, 44);
+    }
+
+    .main-section {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+
+    section .pic {
+        width: 50%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .pic img {
+        width: 100%;
+        margin: auto;
+    }
+
+    section .txt {
+        width: calc(50% - 80px);
+        margin: 30px;
+        padding: 100px 0px 50px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .txt h2 {
+        font-size: 28px;
+        line-height: 1.5em;
+        color: #fff;
+    }
+
+    section .txt span {
+        color: green;
+    }
+
+    section .txt p {
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 20px;
+    }
+
+    section .txt input {
+        width: 350px;
+        height: 30px;
+        color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: rgb(14, 3, 44);
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    section .txt button {
+        text-decoration: none;
+        background-color: rgba(88, 103, 241, 0.966);
+        color: black;
+        align-items: center;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .main-txt {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .title {
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 120px;
+        flex-wrap: wrap;
+    }
+
+    .title h2 {
+        width: 450px;
+        margin: auto;
+        font-size: 35px;
+        text-align: center;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .title p {
+        width: 450px;
+        margin: auto;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.5em;
+    }
+
+    .inrow {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .intxt {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .intxt:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .intxt .pic {
+        width: 50%;
+        margin: auto;
+    }
+
+    .intxt .pic img {
+        width: 100%;
+        height: auto;
+    }
+
+    .intxt .txt {
+        width: calc(60% - 30px);
+        padding: 10px 10px 30px;
+    }
+
+    .intxt h3 {
+        font-size: 35px;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .intxt p {
+        line-height: 1.5em;
+        font-size: 20px;
+        color: #000;
+        margin-bottom: 30px;
+    }
+
+    .intxt ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .intxt li {
+        width: 50%;
+        flex-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.5em;
+        padding-bottom: 15px;
+    }
+
+    .intxt i {
+        color: aqua;
+    }
+
+    .intxt a {
+        font-size: 25px;
+        color: blue;
+        text-decoration: none;
+    }
+
+    .function {
+        background-color: #f4f5f7;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .function h2 {
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 35px;
+        padding: 30px 0px;
+    }
+
+    .function .serve {
+        width: 992px;
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    .serve .inserve {
+        width: calc(100% /3);
+    }
+
+    .inserve img {
+        width: calc(100%/3);
+        margin: auto;
+        background-color: #fff;
+        border-radius: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inserve h3 {
+        font-size: 25px;
+        margin: auto;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .inserve .inp {
+        width: calc(100% - 60px);
+        padding: 0px 30px;
+        font-size: 22px;
+        line-height: 1.5em;
+    }
+
+    .brand {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .recommend {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        border-bottom: 1px solid grey;
+    }
+
+    .recommend h2 {
+        font-size: 30px;
+        width: 100%;
+        margin: auto;
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    .recommend .brand-pic  {
+        display: none;
+    }
+
+
+    .pop {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    .inshow {
+        width: calc(50% - 40px);
+        margin: 20px;
+        text-align: left;
+    }
+
+    .inshow a {
+        text-decoration: none;
+        color: #00f;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .inshow p {
+        padding-top: 10px;
+        padding-bottom: 50px;
+        font-size: 20px;
+        line-height: 2em;
+    }
+
+    .inshow span {
+        display: block;
+        font-size: 20px;
+        color: #000000;
+        margin-top: 60px;
+    }
+    .inshow .pic img {
+        width: 100%;
+    }
+    .dot {
+        display: none;
+    }
+    /* .dot {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .in-dot {
+        width: calc(90% / 5);
+    }
+
+    .dot a {
+        text-decoration: none;
+        text-align: center;
+    } */
+    .asia {
+        width: 100%;
+        height: 490px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #032249;
+        justify-content: center;
+    }
+
+    .asia-txt {
+        width: 992px;
+        display: flex;
+        justify-content: flex-end;
+        background: #032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
+    }
+
+    .asia-txt .txt {
+        width: calc(100% - 60px);
+        color: aliceblue;
+        font-size: 40px;
+        margin: auto 30px;
+    }
+
+    .asia-txt .txt p {
+        color: #fff;
+        line-height: 1.5em;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .asia-txt .txt button {
+        background-color: rgb(18, 61, 250);
+        color: #fff;
+        list-style: none;
+        display: inline-block;
+        font-size: 17px;
+        padding: 10px 100px;
+        border-radius: 30px;
+    }
+
+    .more-infro {
+        background-color: #0f1b31;
+    }
+
+    .footerwrap {
+        width: calc(100% - 60px);
+        height: auto;
+        background-color: #0f1b31;
+        margin: auto 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer {
+        width: 992px;
+        border-top: 1px solid grey;
+        margin-top: 20px;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+    }
+
+    .footertxt ul {
+        list-style: none;
+    }
+
+    .footertxt a{
+        text-decoration: none;
+        color: white;
+        line-height: 30px;
+    }
+
+    .footercol h3,
+    .footercolspecial h3 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    /* .footertxt i{
+        display: none;
+    } */
+    .C19 {
+        width: 100%;
+        background-color: #0f1b31;
+        padding-bottom: 10px;
+    }
+
+    .COVID-19 {
+        width: 100%;
+        background-color: #0f1b31;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .COVID-19 a {
+        color: #000000;
+        text-decoration: none;
+        background-color: #dbf8ed;
+        padding: 20px;
+    }
+
+    .footerbom {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #0f1b31;
+        justify-content: center;
+    }
+
+    .copy-img,
+    .copy-ul,
+    .copy-p {
+        width: calc(100% / 3);
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .copy-ul {
+        order: -1;
+    }
+
+    .copy-ul ul {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .copy-ul li {
+        list-style: none;
+        display: inline-block;
+    } 
+
+
+@media screen and (max-width:768px) {
+    #menu-control, .enter,.start-business,#footer_SHOPLINE,#footer_OpenShop,#footer_Function,    #footer_Resource, #footer_Soultion,    #footer_OtherResource,#footer_Application{
+        display: none;
+    }
+    .hb{
+        display: block;
+    }
+    #menu-control:checked~header .about {
+        display: block;
+        height: calc(100% - 106px);
+    }
+    #menu-control:checked~header .start-business {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         background-color: #00142D;
@@ -17,12 +548,11 @@
         bottom: 0;
         left: 0;
         box-sizing: border-box;
-}
-#menu-control:checked ~ section, #menu-control:checked ~.main-txt,#menu-control:checked ~ .function,#menu-control:checked ~ .brand ,#menu-control:checked ~ .asia ,#menu-control:checked ~ .more-infro{
-    display: none;
-}
-@media screen and (max-width:991px){
-    header{
+    }
+    #menu-control:checked~section,#menu-control:checked~.main-txt,#menu-control:checked~.function,#menu-control:checked~.brand,#menu-control:checked~.asia,#menu-control:checked~.more-infro {
+        display: none;
+    }
+    header {
         width: 100%;
         margin: auto;
         display: flex;
@@ -30,30 +560,24 @@
         position: fixed;
         background-color: #fff;
     }
-    .main-header{
+    .main-header {
         width: 100%;
         margin: auto;
         display: flex;
         justify-content: space-between;
     }
-    .logo {
-        width: 50%;
-    }
-    .logo img{
-        width: 100%;
-    }
-    .enter, .brand-pic{
+    .enter,.brand-pic {
         display: none;
     }
-    .hb{
+    .hb {
         width: 50px;
         height: 50px;
         text-align: center;
     }
-    .hb i{
+    .hb i {
         font-size: 40px;
     }
-    .about{
+    .about {
         background-color: #f00;
         width: 100%;
         margin: auto;
@@ -62,16 +586,20 @@
         left: 0;
         display: none;
     }
-    .about nav a{
+
+    .about nav a {
         display: block;
+        font-size: 20px;
         text-decoration: none;
         margin-top: 10px;
-        padding-left: 10px;
+        padding-left: 30px;
     }
-    .about nav .freeTry{
+
+    .about nav .freeTry {
         display: none;
     }
-    .about nav a::after{
+
+    .about nav a::after {
         content: '';
         width: 100%;
         height: 2px;
@@ -79,17 +607,22 @@
         margin: 20px 0px;
         display: block;
     }
-    .btn {
+
+    .main-header .about .btn {
+        display: block;
         width: 100%;
         margin-top: 20px;
     }
-    .btn .free-try,.sign-in{
+
+    .main-header .about .btn .free-try,.main-header .about .btn .sign-in {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 20px;
     }
-    .free-try a, .sign-in a{
+
+    header .main-header .about .btn .free-try a,
+    header .main-header .about .btn .sign-in a {
         color: #fff;
         background-color: #00f;
         padding: 10px 50px;
@@ -97,44 +630,52 @@
         text-decoration: none;
         border-radius: 30px;
     }
-    .sign-in a{
+
+    .main-header .about .btn .sign-in a {
         border: 2px solid #00f;
         color: #00f;
         background-color: #fff;
     }
-    section{
+
+    section {
         width: 100%;
         margin: auto;
         background-color: #00142D;
     }
-    .pic{
+
+    section .pic {
         width: 90%;
         margin: auto;
     }
-    .pic img{
+
+    section .pic img {
         width: 100%;
         display: flex;
-        padding: 20px 0px ;
+        padding: 20px 0px;
         margin: auto;
     }
-    section .txt{
+
+    section .txt {
         width: 90%;
         margin: auto;
         padding-top: 20px;
     }
-    section .txt h2{
+
+    section .txt h2 {
         color: #fff;
         text-align: center;
         font-size: 30px;
         margin-bottom: 15px;
     }
-    section .txt p{
+
+    section .txt p {
         color: #fff;
         line-height: 24px;
         font-size: 18px;
         padding: 0px 0px 15px;
     }
-    section .txt input{
+
+    section .txt input {
         width: calc(100% - 20px);
         height: 30px;
         color: white;
@@ -144,7 +685,8 @@
         font-size: 20px;
         margin: 10px 10px 10px 0px;
     }
-    section .txt button{
+
+    section .txt button {
         width: 100%;
         background-color: #00f;
         color: #fff;
@@ -153,68 +695,96 @@
         margin-bottom: 20px;
         font-size: 20px;
     }
-    .main-txt{
+
+    .main-txt {
         width: 100%;
         margin: auto;
         margin-bottom: 30px;
-        padding: 60px 0px ;
+        padding: 60px 0px;
     }
-    .title{
+
+    .title {
         width: 90%;
         margin: auto;
         text-align: center;
         margin-bottom: 50px;
     }
-    .title h2{
+
+    .title h2 {
+        width: 100%;
         font-size: 28px;
         margin-bottom: 30px;
         line-height: 1.5em;
     }
-    .title p{
+
+    .title p {
+        width: 100%;
         font-size: 17px;
         line-height: 1.5em;
     }
-    .intxt{
-        width: 90%;
+    .inrow{
+        width: 100%;
         margin: auto;
     }
-    .intxt .pic img{
+    .intxt {
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+    .intxt .pic{
+        width: 100%;
+        margin:auto;
+    }
+    .intxt .pic img {
         width: 100%;
     }
-    .intxt h3{
+    .intxt .txt{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .intxt h3 {
         margin-top: 20px;
         font-size: 28px;
         line-height: 1.5em;
     }
-    .intxt p{
+
+    .intxt p {
         line-height: 1.5em;
         margin-top: 20px;
         margin-bottom: 25px;
     }
-    .intxt ul{
+
+    .intxt ul {
         margin-bottom: 20px;
     }
-    .intxt li{
+
+    .intxt li {
         margin: 10px 0px;
     }
-    .intxt li i{
+
+    .intxt li i {
         color: #b8d4f5;
     }
-    .intxt a{
+
+    .intxt a {
         text-decoration: none;
         font-size: 17px;
         color: #00c;
     }
-    .function{
+
+    .function {
         width: 100%;
         margin: auto;
         text-align: center;
     }
-    .function h2{
+
+    .function h2 {
         font-size: 28px;
         margin-bottom: 20px;
     }
-    .serve{
+
+    .function .serve {
         width: 90%;
         display: flex;
         flex-wrap: wrap;
@@ -222,95 +792,123 @@
         text-align: center;
         justify-content: space-between;
     }
-    .inserve{
-        width: 45%; 
-        margin-bottom: 30px;       
+
+    .serve .inserve {
+        width: calc(100%/2 - 30px);
+        margin-bottom: 30px;
     }
-    .inserve h3{
+    .serve .inserve:nth-of-type(odd){
+        margin-right: 15px;
+    }
+    .serve .inserve:nth-of-type(even){
+        margin-left: 15px;
+    }
+
+    .inserve h3 {
         font-size: 20px;
     }
-    .inserve p{
+
+    .inserve p {
         text-align: justify;
         line-height: 1.5em;
     }
-    .brand{
+
+    .brand {
         width: 90%;
         margin: auto;
     }
-    .recommend{
+
+    .recommend {
         margin-top: 20px;
     }
-    .recommend h2{
+
+    .recommend h2 {
         font-size: 35px;
         margin-bottom: 30px;
         line-height: 1.3em;
     }
-    .recommend span{
+
+    .recommend span {
         color: #00f;
     }
+
     .inshow {
         width: 100%;
         margin: auto;
         margin-bottom: 20px;
         text-align: left;
     }
-    .inshow img{
+
+    .inshow img {
         width: 100%;
         padding-top: 0;
     }
-    .inshow a{
+
+    .inshow a {
         text-decoration: none;
         color: #00f;
         display: inline-block;
         margin-bottom: 20px;
     }
-    .inshow p{
+
+    .inshow p {
         line-height: 1.7em;
         font-size: 16px;
         padding-bottom: 15px;
         margin-bottom: 20px;
     }
-    .inshow span{
+
+    .inshow span {
         font-size: 17px;
         margin-bottom: 20px;
         display: inline-block;
     }
-    .dot{
+
+    .dot {
         width: 100%;
         margin: auto;
         display: flex;
         text-align: center;
         justify-content: space-between;
     }
-    .in-dot{
+
+    .in-dot {
         width: calc(90% / 5);
     }
-    .dot a{
+
+    .dot a {
         text-decoration: none;
         text-align: center;
     }
-    .asia{
+
+    .asia {
         width: 100%;
+        height: auto;
         margin: auto;
         background-color: #032249;
+
     }
-    .asia-txt{
+
+    .asia .asia-txt {
         width: 90%;
         margin: auto;
         padding-bottom: 50px;
     }
-    .asia-txt .txt{
+
+    .asia-txt .txt {
         width: 100%;
-        background:#032249 ;
+        background: #032249;
         margin: auto;
     }
-    .asia-txt .txt p{
+    
+    .asia-txt .txt p {
         color: #fff;
         font-size: 30px;
         line-height: 2em;
         padding: 20px 0px;
     }
-    .asia-txt .txt button{
+
+    .asia-txt .txt button {
         width: 90%;
         padding: 10px 0px;
         margin: 0px 20px;
@@ -319,25 +917,54 @@
         border-radius: 30px;
         background-color: #00f;
     }
-    .asia-txt .txt  img{
+
+    .asia .asia-txt .txt img{
+        display: block;
         width: 100%;
-        background-color: #032249;
     }
-    .more-infro{
+
+    /* #footer_SHOPLINE:checked~.footerwrap .footer .footertxt .SHOPLINE,
+    #footer_OpenShop:checked~.footerwrap .footer .footertxt .OpenShop,
+    #footer_Function:checked~.footerwrap .footer .footertxt .Function,
+    #footer_Resource:checked~.footerwrap .footer .footertxt .Resource,
+    #footer_Soultion:checked~.footerwrap .footer .footertxt .Soultion,
+    #footer_OtherResource:checked~.footerwrap .footer .footertxt  .OtherResource,
+    #footer_Application:checked~.footerwrap .footer  .footertxt .Application {
+        display: block;
+    } */
+    .more-infro {
         width: 100%;
         margin: auto;
         background-color: #00142d;
     }
-    .footerwrap{
+
+    .footerwrap {
         width: 100%;
         margin: auto;
         background-color: #00142d;
     }
-    .footer{
+
+    .footerwrap .footer {
         width: 100%;
         margin: auto;
+        display: block;
     }
-    .footercol h3{
+    .footertxt{
+        width: 100%;
+        /* display: block; */
+        margin: auto;
+    }
+    .footercol,
+    .footercolspecial {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #666;
+    }
+
+    .footercol h3,
+    .footercolspecial h3 {
         width: 90%;
         margin: auto;
         font-size: 17px;
@@ -347,67 +974,97 @@
         padding: 20px 0;
         line-height: 1;
     }
-    .footercol h3::after{
-        content: '\f107';
-        font-weight: 900;
-        font-family: "Font Awesome 6 Free";
+    .footer .footertxt  i{
+        color: #fff;
+        font-size: 25px;
     }
-    .footercol ul{
+    #footer_SHOPLINE:checked~ .more-infro .footerwrap .footer .footertxt .SHOPLINE,
+    #footer_OpenShop:checked~ .more-infro .footerwrap .footer .footertxt .OpenShop,
+    #footer_Function:checked~ .more-infro .footerwrap .footer .footertxt .Function,
+    #footer_Resource:checked~ .more-infro .footerwrap .footer .footertxt .Resource,
+    #footer_Soultion:checked~ .more-infro .footerwrap .footer .footertxt .Soultion,
+    #footer_OtherResource:checked~ .more-infro .footerwrap .footer .footertxt  .OtherResource,
+    #footer_Application:checked~ .more-infro .footerwrap .footer  .footertxt .Application {
+        display: block;
+    }
+
+    .footer ul {
         display: none;
-    }
-    .footercolspecial h3{
         width: 90%;
         margin: auto;
-        font-size: 17px;
-        display: flex;
-        justify-content: space-between;
+    }
+
+    .footer ul li {
+        list-style: none;
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer ul li a {
         color: #fff;
-        padding: 20px 0;
-        line-height: 1;
+        font-size: 20px;
+        text-decoration: none;
     }
-    .footercolspecial ul{
-        display: none;
-    }
-    .C19{
+    
+
+    .C19 {
         width: 100%;
         margin: auto;
     }
-    .COVID-19{
+
+    .C19 .COVID-19 {
+        width: 90%;
         padding: 20px 0px;
-        text-align: center;
+        text-align: start;
+        margin: auto;
+        justify-content: flex-start;
     }
-    .COVID-19 a{
+
+    .COVID-19 a {
         background-color: #dbf8ed;
         color: #000;
         padding: 5px 10px;
         text-decoration: none;
     }
+
     [class*='copy-'] {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         text-align: center;
         margin: auto;
         padding: 20px 0px;
         color: #fff;
     }
-    .footerbom .copy-img img{
-        width: 45px ;
+    .footerbom{
+        width: 100%;
+        display: block;
+    }
+    .footerbom .copy-img img {
+        width: 45px;
         height: 45px;
     }
-    .copy-ul ul{
+
+    .copy-ul ul {
         width: 100%;
         margin: auto;
     }
-    .copy-ul li{
+
+    .copy-ul li {
         color: #fff;
         display: block;
         text-align: center;
         padding: 10px 0px;
     }
-    .copy-p p{
+
+    .copy-p p {
         margin-bottom: 30px;
         padding-bottom: 20px;
         position: relative;
     }
-    .copy-p p::after{
+
+    .copy-p p::after {
         content: '\f0ac  台灣(中文)';
         font-weight: 900;
         font-family: "Font Awesome 6 Free";
@@ -417,11 +1074,24 @@
         text-align: center;
     }
 }
-@media screen and (min-width:992px) {
-    .hb,.about .start-business , #menu-control , .btn,.start-business, .dot,.asia-txt img{
+
+@media screen and (min-width:992px) { 
+    .hb, 
+    .about .start-business,
+    #menu-control,
+    .btn,
+    .start-business,
+    .dot,
+    .asia-txt img {
         display: none;
     }
-    .enter{
+
+    #menu-control,  #menu-control~header .start-business,    #footer_SHOPLINE,    #footer_OpenShop,    #footer_Function,
+    #footer_Resource,    #footer_Soultion,    #footer_OtherResource,    #footer_Application {
+        display: none;
+    }
+
+    .enter {
         width: 100%;
         background-color: rgb(14, 3, 44);
         margin: auto;
@@ -429,9 +1099,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
     }
-    .sign{
+
+    .sign {
         width: 100%;
         height: 40px;
         margin: auto;
@@ -439,19 +1110,23 @@
         align-items: center;
         justify-content: flex-end;
     }
+
     .sign i {
         color: aliceblue;
         margin-right: 10px;
     }
-    .enter a{
+
+    .enter a {
         color: aliceblue;
         text-decoration: none;
     }
-    header{
+
+    header {
         width: 100%;
         margin: auto;
     }
-    .main-header{
+
+    .main-header {
         width: 100%;
         margin: auto;
         background-color: rgb(247, 247, 247);
@@ -460,33 +1135,39 @@
         align-items: center;
         flex-wrap: wrap;
     }
-    .logo{
+
+    .logo {
         width: 160px;
         padding-left: 30px;
     }
-    header img{
+
+    header img {
         width: 100%;
     }
-    .about nav a{
+
+    .about nav a {
         text-decoration: none;
         align-items: center;
         padding: 10px;
         color: black;
     }
-    .about a.freeTry{
+
+    .about a.freeTry {
         text-decoration: none;
         background-color: rgba(88, 103, 241, 0.966);
         align-items: center;
         padding: 10px;
         margin-left: 20px;
-        border-radius: 30px; 
-    } 
-    section{
+        border-radius: 30px;
+    }
+
+    section {
         width: 100%;
         margin: auto;
         background-color: rgb(14, 3, 44);
     }
-    .main-section{
+
+    .main-section {
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
@@ -494,37 +1175,44 @@
         margin: auto;
         justify-content: center;
     }
-    section .pic{
+
+    section .pic {
         width: 50%;
         margin: auto;
         justify-content: center;
         align-items: center;
     }
-    section .pic img{
+
+    section .pic img {
         width: 100%;
         margin: auto;
     }
-    section .txt{
+
+    section .txt {
         width: calc(50% - 80px);
         margin: 30px;
         padding: 100px 0px 50px 20px;
         justify-content: center;
         align-items: center;
     }
-    section .txt h2{
+
+    section .txt h2 {
         font-size: 28px;
         line-height: 1.5em;
         color: #fff;
     }
-    section .txt span{
+
+    section .txt span {
         color: green;
     }
-    section .txt p{
+
+    section .txt p {
         color: #fff;
         line-height: 1.5em;
         font-size: 20px;
     }
-    section .txt input{
+
+    section .txt input {
         width: 350px;
         height: 30px;
         color: white;
@@ -534,26 +1222,30 @@
         margin-top: 10px;
         margin-right: 10px;
     }
-    section .txt button{
+
+    section .txt button {
         text-decoration: none;
         background-color: rgba(88, 103, 241, 0.966);
         color: black;
         align-items: center;
         padding: 10px;
-        border-radius: 30px; 
+        border-radius: 30px;
     }
-    .main-txt{
+
+    .main-txt {
         width: 100%;
-        padding-top:50px ;
+        padding-top: 50px;
     }
-    .title{
+
+    .title {
         width: 100%;
         margin: auto;
         margin-top: 50px;
         margin-bottom: 120px;
         flex-wrap: wrap;
     }
-    .title h2{
+
+    .title h2 {
         width: 450px;
         margin: auto;
         font-size: 35px;
@@ -561,70 +1253,84 @@
         line-height: 1.5em;
         margin-bottom: 20px;
     }
-    .title p{
+
+    .title p {
         width: 450px;
         margin: auto;
         text-align: center;
         font-size: 17px;
         line-height: 1.5em;
     }
-    .inrow{
+
+    .inrow {
         width: 992px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    .intxt{
+
+    .intxt {
         display: flex;
         margin-bottom: 40px;
     }
-    .intxt:nth-child(odd){
+
+    .intxt:nth-child(odd) {
         flex-direction: row-reverse;
     }
-    .intxt .pic{
+
+    .intxt .pic {
         width: 50%;
         margin: auto;
     }
-    .intxt .pic img{
+
+    .intxt .pic img {
         width: 100%;
         height: auto;
     }
-    .intxt .txt{
+
+    .intxt .txt {
         width: calc(60% - 30px);
-        padding: 10px 10px 30px ;
+        padding: 10px 10px 30px;
     }
-    .intxt h3{
+
+    .intxt h3 {
         font-size: 35px;
         line-height: 1.5em;
         margin-bottom: 15px;
     }
-    .intxt p{
+
+    .intxt p {
         line-height: 1.5em;
         font-size: 20px;
         color: #000;
         margin-bottom: 30px;
     }
-    .intxt ul{
+
+    .intxt ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
-    .intxt li{
+
+    .intxt li {
         width: 50%;
         flex-wrap: wrap;
         font-size: 20px;
         line-height: 1.5em;
         padding-bottom: 15px;
     }
-    .intxt i{
+
+    .intxt i {
         color: aqua;
     }
-    .intxt a{
+
+    .intxt a {
         font-size: 25px;
         color: blue;
         text-decoration: none;
     }
+
     .function {
         background-color: #f4f5f7;
         display: flex;
@@ -635,102 +1341,119 @@
         padding-top: 50px;
         padding-bottom: 40px;
     }
-    .function h2{
+
+    .function h2 {
         width: 100%;
         flex-wrap: wrap;
         text-align: center;
         font-size: 35px;
         padding: 30px 0px;
     }
-    .function .serve{
+
+    .function .serve {
         width: 992px;
         display: flex;
         margin: auto;
         flex-wrap: wrap;
     }
-    .serve .inserve{
+
+    .serve .inserve {
         width: calc(100% /3);
     }
-    .inserve img{
+
+    .inserve img {
         width: calc(100%/3);
         margin: auto;
         background-color: #fff;
-        border-radius: 30%; 
+        border-radius: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .inserve h3{
+
+    .inserve h3 {
         font-size: 25px;
         margin: auto;
         text-align: center;
         padding: 20px 0px;
     }
-    .inserve .inp{
+
+    .inserve .inp {
         width: calc(100% - 60px);
         padding: 0px 30px;
         font-size: 22px;
         line-height: 1.5em;
     }
-    .brand{
+
+    .brand {
         width: 992px;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
     }
-    .recommend{
+
+    .recommend {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         border-bottom: 1px solid grey;
     }
-    .recommend h2{
+
+    .recommend h2 {
         font-size: 30px;
         width: 100%;
         margin: auto;
-        padding: 20px 0px ;
+        padding: 20px 0px;
         text-align: center;
     }
-    .recommend .brand-pic{
+
+    .recommend .brand-pic {
         width: calc(100%/5);
         text-align: center;
     }
-    .pop{
+
+    .pop {
         width: 992px;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
     }
-    .inshow{
+
+    .inshow {
         width: calc(50% - 60px);
         padding: 10px;
         margin: 20px;
         text-align: left;
     }
-    .inshow a{
+
+    .inshow a {
         text-decoration: none;
         color: #00f;
         margin-top: 20px;
         font-size: 20px;
     }
-    .inshow p{
+
+    .inshow p {
         padding-top: 10px;
         padding-bottom: 50px;
         font-size: 20px;
         line-height: 2em;
     }
-    .inshow span{
+
+    .inshow span {
         display: block;
         font-size: 20px;
         color: #000000;
         margin-top: 60px;
     }
-    .inshow img{
+
+    .inshow img {
         width: 100%;
     }
-    .asia{
+
+    .asia {
         width: 100%;
         height: 490px;
         margin: auto;
@@ -739,91 +1462,104 @@
         background-color: #032249;
         justify-content: center;
     }
-    .asia-txt{
+
+    .asia-txt {
         width: 992px;
         display: flex;
         justify-content: flex-end;
-        background:#032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
+        background: #032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
     }
-    .asia-txt .txt{
+
+    .asia-txt .txt {
         width: calc(100% - 60px);
         color: aliceblue;
         font-size: 40px;
         margin: auto 30px;
     }
-    .asia-txt .txt p{
+
+    .asia-txt .txt p {
         color: #fff;
         line-height: 1.5em;
         font-size: 40px;
         margin-bottom: 30px;
     }
-    .asia-txt .txt button{
+
+    .asia-txt .txt button {
         background-color: rgb(18, 61, 250);
         color: #fff;
         list-style: none;
         display: inline-block;
         font-size: 17px;
         padding: 10px 100px;
-        border-radius: 30px; 
+        border-radius: 30px;
     }
-    .more-infro{
+
+    .more-infro {
         background-color: #0f1b31;
     }
-    .footerwrap{
-        width: calc(100% - 60px);
+
+    .footerwrap {
+        width: 100%;
         height: auto;
         background-color: #0f1b31;
-        margin: auto 30px;
+        margin: auto ;
         display: flex;
         justify-content: center;
     }
-    .footer{
-        width: 992px;
+
+    .footer {
+        width: calc(100% - 60px);
         border-top: 1px solid grey;
-        margin-top: 20px;
+        margin: 20px 20px 30px;
         display: flex;
         color: white;
         justify-content: space-between;
     }
-    .footercol ul,.footercolspecial ul{
+    .footertxt{
+        width: calc(992px /7);
+    }
+    .footercol ul,
+    .footercolspecial ul {
         list-style: none;
     }
-    .footercol a, .footercolspecial a{
+
+    .footercol a,
+    .footercolspecial a {
         text-decoration: none;
         color: white;
         line-height: 30px;
     }
-    .footercol{
-        width: calc(100%/7 - 10px);
-        padding-left: 10px;
-    }
-    .footercol h3, .footercolspecial h3{
+
+    .footercol h3,
+    .footercolspecial h3 {
         margin-bottom: 20px;
         margin-top: 20px;
     }
-    .footercolspecial{
-        width: calc(100%/7 - 10px);
-        padding-left: 10px;
+    .more-infro i{
+        display: none;
     }
-    .C19{
+    .C19 {
         width: 100%;
         background-color: #0f1b31;
         padding-bottom: 10px;
     }
-    .COVID-19{
-        width: 992px;
+
+    .COVID-19 {
+        width: calc(100% - 24px);
         background-color: #0f1b31;
-        margin: auto;
+        margin: auto 12px;
         display: flex;
         justify-content: flex-end;
     }
-    .COVID-19 a{
+
+    .COVID-19 a {
         color: #000000;
         text-decoration: none;
         background-color: #dbf8ed;
-        padding: 20px ;
+        padding: 20px;
     }
-    .footerbom{
+
+    .footerbom {
         width: 992px;
         margin: auto;
         display: flex;
@@ -831,40 +1567,44 @@
         background-color: #0f1b31;
         justify-content: center;
     }
-    .copy-img, .copy-ul ,.copy-p{
-        width: 400px;
+    .copy-img,
+    .copy-ul,
+    .copy-p {
+        width: calc(992px /3);
         color: white;
         display: flex;
+        justify-content: space-around;
         align-items: center;
     }
-    .copy-ul{
+
+    .copy-ul {
         order: -1;
     }
-    .copy-ul ul{
+
+    .copy-ul ul {
         display: inline-block;
         justify-content: center;
     }
-    .copy-ul li{
+
+    .copy-ul li {
         list-style: none;
         display: inline-block;
-    }
+    } 
 }
 
-@media screen and (min-width:1200px){
-    .hb,.about .start-business , #menu-control , .btn,.start-business, .dot,.asia-txt img{
-        display: none;
-    }
-    .enter{
-        width: 100%;
+@media screen and (min-width:1200px) {
+    /* .enter {
+        width: 1200px;
         background-color: rgb(14, 3, 44);
         margin: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
     }
-    .sign{
+    
+    .sign {
         width: 1200px;
         height: 40px;
         margin: auto;
@@ -872,19 +1612,22 @@
         align-items: center;
         justify-content: flex-end;
     }
+    
     .sign i {
         color: aliceblue;
         margin-right: 10px;
     }
-    .enter a{
+    
+    .enter a {
         color: aliceblue;
         text-decoration: none;
     }
-    header{
-        width: 100%;
+    
+    header {
+        width: 1200px;
         margin: auto;
     }
-    .main-header{
+    .main-header {
         width: 1200px;
         margin: auto;
         background-color: rgb(247, 247, 247);
@@ -893,32 +1636,48 @@
         align-items: center;
         flex-wrap: wrap;
     }
-    .logo{
+    
+    .logo {
         padding-left: 30px;
     }
-    header img{
+    
+    .hb,
+    .about .start-business,
+    #menu-control,
+    .btn,
+    .start-business,
+    .dot,
+    .asia-txt img {
+        display: none;
+    }
+    
+    header img {
         width: 100%;
     }
-    .about nav a{
+    
+    .about nav a {
         text-decoration: none;
         align-items: center;
         padding: 10px;
         color: black;
     }
-    .about a.freeTry{
+    
+    .about a.freeTry {
         text-decoration: none;
         background-color: rgba(88, 103, 241, 0.966);
         align-items: center;
         padding: 10px;
         margin-left: 200px;
-        border-radius: 30px; 
-    } 
-    section{
-        width: 100%;
+        border-radius: 30px;
+    }
+    
+    section {
+        width: 1200px;
         margin: auto;
         background-color: rgb(14, 3, 44);
     }
-    .main-section{
+    
+    .main-section {
         width: 1200px;
         display: flex;
         flex-direction: row-reverse;
@@ -926,36 +1685,43 @@
         margin: auto;
         justify-content: center;
     }
-    section .pic{
+    
+    section .pic {
         width: 50%;
         justify-content: center;
         align-items: center;
     }
-    section .pic img{
+    
+    section .pic img {
         width: 100%;
         margin: auto;
     }
-    section .txt{
+    
+    section .txt {
         width: calc(50% - 80px);
         margin: 30px;
         padding: 100px 0px 50px 20px;
         justify-content: center;
         align-items: center;
     }
-    section .txt h2{
+    
+    section .txt h2 {
         font-size: 28px;
         line-height: 1.5em;
         color: #fff;
     }
-    section .txt span{
+    
+    section .txt span {
         color: green;
     }
-    section .txt p{
+    
+    section .txt p {
         color: #fff;
         line-height: 1.5em;
         font-size: 20px;
     }
-    section .txt input{
+    
+    section .txt input {
         width: 350px;
         height: 30px;
         color: white;
@@ -965,95 +1731,114 @@
         margin-top: 10px;
         margin-right: 10px;
     }
-    section .txt button{
+    
+    section .txt button {
         text-decoration: none;
         background-color: rgba(88, 103, 241, 0.966);
         color: black;
         align-items: center;
         padding: 10px;
-        border-radius: 30px; 
+        border-radius: 30px;
     }
-    .main-txt{
-        width: 100%;
-        padding-top:50px ;
+    
+    .main-txt {
+        width: 1200px;
+        padding-top: 50px;
     }
-    .title{
+    
+    .title {
         width: 100%;
-        margin: 50px auto 120px ;
+        margin: 50px auto 120px;
         text-align: center;
         flex-wrap: wrap;
     }
-    .title h2{
+    
+    .title h2 {
         width: 450px;
         margin: auto;
         font-size: 35px;
         line-height: 1.5em;
         margin-bottom: 20px;
     }
-    .title p{
+    
+    .title p {
         width: 450px;
         margin: auto;
         font-size: 17px;
         line-height: 1.5em;
     }
-    .inrow{
+    
+    .inrow {
         width: 1200px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
     }
-    .intxt{
+    
+    .intxt {
         display: flex;
         margin-bottom: 40px;
     }
-    .intxt:nth-child(odd){
+    
+    .intxt:nth-child(odd) {
         flex-direction: row-reverse;
     }
-    .intxt .pic{
+    
+    .intxt .pic {
         width: calc(50% - 20px);
         padding: 10px;
         margin: auto;
     }
-    .intxt .pic img{
+    
+    .intxt .pic img {
         width: 100%;
         height: auto;
     }
-    .intxt .txt{
+    
+    .intxt .txt {
         width: calc(50% - 60px);
         padding: 10px 30px;
     }
-    .intxt h3{
+    
+    .intxt h3 {
         font-size: 35px;
         line-height: 1.5em;
         margin-bottom: 15px;
     }
-    .intxt p{
+    
+    .intxt p {
         line-height: 1.5em;
         font-size: 20px;
         color: #000;
         margin-bottom: 30px;
     }
-    .intxt ul{
+    
+    .intxt ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
     }
-    .intxt li{
+    
+    .intxt li {
         width: 50%;
         flex-wrap: wrap;
         font-size: 20px;
         padding-bottom: 15px;
     }
-    .intxt i{
+    
+    .intxt i {
         color: aqua;
     }
-    .intxt a{
+    
+    .intxt a {
         font-size: 25px;
         color: blue;
         text-decoration: none;
     }
+    
     .function {
+        width: 1200px;
         background-color: #f4f5f7;
         display: flex;
         flex-wrap: wrap;
@@ -1063,103 +1848,120 @@
         padding-top: 50px;
         padding-bottom: 40px;
     }
-    .function h2{
+    
+    .function h2 {
         width: 100%;
         flex-wrap: wrap;
         text-align: center;
         font-size: 35px;
         padding: 30px 0px;
     }
-    .function .serve{
+    
+    .function .serve {
         width: 1200px;
         display: flex;
         margin: auto;
         flex-wrap: wrap;
     }
-    .serve .inserve{
+    
+    .serve .inserve {
         width: calc(100% /3);
     }
-    .inserve img{
+    
+    .inserve img {
         width: calc(100%/3);
         margin: auto;
         background-color: #fff;
-        border-radius: 30%; 
+        border-radius: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .inserve h3{
+    
+    .inserve h3 {
         font-size: 25px;
         margin: auto;
         text-align: center;
         padding: 20px 0px;
     }
-    .inserve .inp{
+    
+    .inserve .inp {
         width: calc(100% - 60px);
         padding: 0px 30px;
         font-size: 22px;
         line-height: 1.5em;
     }
-    .brand{
+    
+    .brand {
         width: 1200px;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
     }
-    .recommend{
+    
+    .recommend {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         border-bottom: 1px solid grey;
     }
-    .recommend h2{
+    
+    .recommend h2 {
         font-size: 30px;
         width: 100%;
         margin: auto;
-        padding: 20px 0px ;
+        padding: 20px 0px;
         text-align: center;
     }
-    .recommend .brand-pic{
+    
+    .recommend .brand-pic {
         width: calc(100%/5);
         text-align: center;
     }
-    .pop{
+    
+    .pop {
         width: 1200px;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
     }
-    .inshow{
+    
+    .inshow {
         width: calc(50% - 60px);
         padding: 10px;
         margin: 20px;
         text-align: left;
     }
-    .inshow a{
+    
+    .inshow a {
         text-decoration: none;
         color: #00f;
         margin-top: 20px;
         font-size: 20px;
     }
-    .inshow p{
+    
+    .inshow p {
         padding-top: 10px;
         padding-bottom: 50px;
         font-size: 20px;
         line-height: 2em;
     }
-    .inshow span{
+    
+    .inshow span {
         display: block;
         font-size: 20px;
         color: #000000;
         margin-top: 60px;
     }
-    .inshow img{
+    
+    .inshow img {
         width: 100%;
     }
-    .asia{
-        width: 100%;
+    
+    .asia {
+        width: 1200px;
         height: 490px;
         margin: auto;
         display: flex;
@@ -1167,38 +1969,44 @@
         background-color: #032249;
         justify-content: center;
     }
-    .asia-txt{
-        /* width: 1350px; */
+    
+    .asia-txt {
         width: 1200px;
         display: flex;
         justify-content: flex-end;
-        background:#032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
+        background: #032249 url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat right bottom;
     }
-    .asia-txt .txt{
+    
+    .asia-txt .txt {
         width: calc(100% - 60px);
         color: aliceblue;
         font-size: 40px;
         margin: auto 30px;
     }
-    .asia-txt .txt p{
+    
+    .asia-txt .txt p {
         color: #fff;
         line-height: 1.5em;
         font-size: 40px;
         margin-bottom: 30px;
     }
-    .asia-txt .txt button{
+    
+    .asia-txt .txt button {
         background-color: rgb(18, 61, 250);
         color: #fff;
         list-style: none;
         display: inline-block;
         font-size: 17px;
         padding: 10px 100px;
-        border-radius: 30px; 
+        border-radius: 30px;
     }
-    .more-infro{
+    
+    .more-infro {
+        width: 100%;
         background-color: #0f1b31;
     }
-    .footerwrap{
+    
+    .footerwrap {
         width: calc(100% - 60px);
         height: auto;
         background-color: #0f1b31;
@@ -1206,7 +2014,8 @@
         display: flex;
         justify-content: center;
     }
-    .footer{
+    
+    .footer {
         width: 1200px;
         border-top: 1px solid grey;
         margin-top: 20px;
@@ -1214,46 +2023,48 @@
         color: white;
         justify-content: space-between;
     }
-    .footercol ul,.footercolspecial ul{
+    .footertxt{
+        width: calc(100%/7 - 10px);
+        padding-left: 10px;
+    }
+    
+    .footer ul{
         list-style: none;
     }
-    .footercol a, .footercolspecial a{
+    
+    .footer a{
         text-decoration: none;
         color: white;
         line-height: 30px;
     }
-    .footercol{
-        width: calc(100%/7 - 10px);
-        padding-left: 10px;
-    }
-    .footercol h3, .footercolspecial h3{
+    .footercol h3,
+    .footercolspecial h3 {
         margin-bottom: 20px;
         margin-top: 20px;
     }
-    .footercolspecial{
-        width: calc(100%/7 - 10px);
-        padding-left: 10px;
-    }
-    .C19{
+    
+    .C19 {
         width: 100%;
         background-color: #0f1b31;
         padding-bottom: 10px;
     }
-    .COVID-19{
+    
+    .COVID-19 {
         width: 1200px;
         background-color: #0f1b31;
         margin: auto;
         display: flex;
         justify-content: flex-end;
-        /* justify-content: end; */
     }
-    .COVID-19 a{
+    
+    .COVID-19 a {
         color: #000000;
         text-decoration: none;
         background-color: #dbf8ed;
-        padding: 20px ;
+        padding: 20px;
     }
-    .footerbom{
+    
+    .footerbom {
         width: 1200px;
         margin: auto;
         display: flex;
@@ -1261,21 +2072,100 @@
         background-color: #0f1b31;
         justify-content: center;
     }
-    .copy-img, .copy-ul ,.copy-p{
+    
+    .copy-img,.copy-ul,.copy-p {
         width: 400px;
         color: white;
         display: flex;
         align-items: center;
     }
-    .copy-ul{
+    
+    .copy-ul {
         order: -1;
     }
-    .copy-ul ul{
+    
+    .copy-ul ul {
         display: inline-block;
         justify-content: center;
     }
-    .copy-ul li{
+    
+    .copy-ul li {
         list-style: none;
         display: inline-block;
+    } */
+
+    .hb,
+    .about .start-business,
+    #menu-control,
+    .btn,
+    .start-business,
+    .dot,
+    .asia-txt img {
+        display: none;
     }
-}
+    .sign{
+        width: 1200px;
+    }
+    .main-header{
+        width: 1200px;
+    }
+    .about a.freeTry{
+        margin-left: 200px;
+    } 
+    .main-section{
+        width: 1200px;
+    }
+    .inrow{
+        width: 1200px;
+    }
+    .intxt .pic{
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+    .intxt .txt{
+        width: calc(50% - 60px);
+        padding: 10px 30px;
+    }
+    .function .serve{
+        width: 1200px;
+    }
+    .brand{
+        width: 1200px;
+    }
+    .pop{
+        width: 1200px;
+    }
+    .asia-txt{
+        width: 1200px;
+    }
+
+    .footerwrap{
+        width: 1200px;
+        margin: auto ;
+    }
+    .footer{
+        width: 1200px;
+    }
+    .footertxt {
+        width: 140px;
+        padding-left: 10px;
+    }
+    .footertxt:nth-of-type(6){
+        width: 240px;
+        padding-left: 10px;
+    }
+    .footercol h3,
+    .footercolspecial h3 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .COVID-19{
+        width: 1200px;
+        margin: auto;
+    }
+    .footerbom{
+        width: 1200px;
+        margin: auto;
+        justify-content: space-between;
+    } 
+} 
