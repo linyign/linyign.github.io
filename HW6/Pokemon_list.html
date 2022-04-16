@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <!-- 單引號或雙引號都可以 執行上不會有差別 -->
+    <button id='loadall' onclick="allPokemon()">Load All</button>
+    <button id='addone' onclick="AddPokemon()">Click +1</button>
+    <button id='removeone' onclick="removePokemon()">Click -1</button>
+    <button id='reset' onclick="resetPokemon()">Reset</button>
+    <div id="container">
+
+    </div>
+
+    <script>
+        let container;
+
+        // 確保加載完成
+        window.onload=function(){
+            container=document.getElementById('container');
+            // appendPokemon();
+        }
+
+        function appendPokemon(){
+            //1.creat<img>
+            let img=document.createElement("img");
+            
+            //2.set<img>
+            img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png")
+            
+            //3.append <img> into container
+            container.appendChild(img);
+        }
+
+        //innerHTML的用法
+        function appendPokemonByTemplate(){
+            let fileName="001";
+            let pathFile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+            let pokemonImg=`<img src='${pathFile}' >`;
+            container.innerHTML=pokemonImg;
+        }
+
+        function allPokemon(){
+            for(let i=1;i<898;i++){
+                let fileName=i.toString().padStart(3,"0");
+                let pathFile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+
+                let img=document.createElement("img");
+                img.setAttribute("src",pathFile);
+                
+                //這個function是匿名的
+                img.addEventListener("click", function (event) {
+                    container.removeChild(event.target); //當我點擊到某一個圖片時他會被移除
+                });
+                container.append(img);  //append==appendChild
+            }
+        }
+
+        //作業
+        function AddPokemon(){
+            
+        }
+        
+        function removePokemon(){
+            container.removeChild(container.lastChild);
+        }
+
+        function resetPokemon(){
+            container.innerHTML="";
+        }
+
+
+    </script>
+</body>
+
+</html>
