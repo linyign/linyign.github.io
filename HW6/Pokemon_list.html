@@ -62,41 +62,25 @@
         }
 
         //作業
-        let i=0;
-        let j=0;
-        let repeat=0;
         function AddPokemon() {
-            i++;
-            if(i>1){
-                container.innerHTML="";
-            }
-            for(let j=1;j<i+1;j++){
-                let fileName=j.toString().padStart(3,"0");
-                let pathFile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`
-                let img=document.createElement("img");
-                img.setAttribute("src",pathFile)
-                let reduce= document.getElementById("removeone");
-                reduce.addEventListener("click" , function(event){
-                    i= j -repeat;
-                });
-                container.append(img);
-            }
+            let img_number =document.querySelectorAll("img");
+            let next_img=(img_number.length) + 1;
+            
+            next_img=next_img.toString().padStart(3,"0");
+            let img=document.createElement("img");
+            let pathFile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${next_img}.png`;
+            img.setAttribute("src",pathFile);
+            container.append(img);
+
+
         }
 
         function removePokemon(){
             container.removeChild(container.lastChild);
-            repeat++;
-            let increase = document.getElementById("addone");
-            increase.addEventListener("click", function (event) {
-                repeat = 0;
-            });
         }
 
         function resetPokemon(){
             container.innerHTML="";
-            i=0;
-            j=0;
-            repeat=0;
         }
 
 
