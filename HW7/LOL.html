@@ -2206,6 +2206,9 @@
             
             let LOLRole={
                 Title:['index','id','text','url'],
+                hero:{
+
+                }
             }
             btnListHero.addEventListener("click", function () {
                 if(heroArray.length==0){
@@ -2229,7 +2232,6 @@
                 document.querySelector("#container").innerHTML = "";
 
                 table=document.createElement('table');
-                table.setAttribute("class", "table table-bordered table-striped table-dark");
                 
                 thead=document.createElement('thead');
                 let theadtr=document.createElement('tr');
