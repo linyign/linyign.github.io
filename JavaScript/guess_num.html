@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mb-2 m-auto mt-3 row-cols-3">
+            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="start" type="button" >開始</button>
+            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="reset" type="button">放棄重來</button>
+            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="look_ans"  type="button">看答案</button>
+        </div>
+        <div class="row">
+            <div id="box">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3 mt-2">
+                <button class="btn_guess">猜答案</button>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <button class="btn_guess" id="btn_guess">猜!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+        <script>
+            let p, container,random,ans,number ,p2,span,a,b;
+            let arr=[];
+            window.onload=function(){
+                box=document.getElementById('box');
+    
+                input =  document.querySelector("input");
+                btn_start=document.getElementById('start');
+                btn_reset=document.getElementById('reset');
+                
+                btn_lookans=document.getElementById('look_ans');
+                btn_guess=document.getElementById('btn_guess');
+    
+                btn_start.addEventListener("click",  ()=> {
+                    randomnum();
+                });
+                
+                btn_reset.addEventListener("click",  ()=> {
+                    location.reload();
+                });
+    
+                btn_lookans.addEventListener("click",()=>{
+
+                    alert( `${arr.toString().replace(/,/g,"")}`);
+                })
+                function randomnum(){  
+                    for(let i=0;arr.length<4;i++)
+                    {
+                        ans=Math.floor(Math.random(0,9) * 10);
+                        if(arr.includes(ans))
+                        {
+                            ans=Math.floor(Math.random(0,9) * 10);
+                        }
+                        else
+                        {
+                            arr.push(ans);
+                        }
+                    }
+                }
+                btn_guess.addEventListener("click",()=>{
+                    a=0;
+                    b=0;
+                    let input_arr=Array.from(input.value);
+                    for(let i=0;i<=3;i++)
+                    {
+                        if(arr[i]==input_arr[i]){
+                            a++;
+                        }
+                        for (let j = 3; j >= 0; j--) {
+                            if (arr[i] == input_arr[j]) {
+                                b++;
+                            }
+                        }
+                    } 
+                    let p=document.createElement('p');
+                    p.setAttribute("class","txt");
+                    let span=document.createElement('span');
+                    span.setAttribute("class","bg-danger text-white")
+                    span.innerText=`${a}A ${b-a}B`;
+                    p.appendChild(span);
+                    box.appendChild(p);
+                    if(a==4){
+                        span.setAttribute("class","bg-success text-dark")
+                    }
+                    let input_num=document.createElement('p');
+                    input_num.innerText=input.value;
+                    p.appendChild(input_num);
+                    box.appendChild(p);
+                })
+
+    
+    
+            }
+        </script>
+</body>
+
+</html>
