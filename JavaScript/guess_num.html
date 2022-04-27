@@ -15,9 +15,9 @@
 
     <div class="container">
         <div class="row mb-2 m-auto mt-3 row-cols-3">
-            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="start" type="button" >開始</button>
-            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="reset" type="button">放棄重來</button>
-            <button class="btn_num btn-outline-secondary col btn-white text-dark " id="look_ans"  type="button">看答案</button>
+            <button class="btn_num btn-outline-secondary col btn-secondary text-dark " id="start" type="button" >開始</button>
+            <button class="btn_num btn-outline-secondary col btn-warning text-dark " id="reset" type="button">放棄重來</button>
+            <button class="btn_num btn-outline-secondary col btn-info text-dark " id="look_ans"  type="button">看答案</button>
         </div>
         <div class="row">
             <div id="box">
@@ -25,7 +25,6 @@
         </div>
         <div class="row">
             <div class="input-group mb-3 mt-2">
-                <button class="btn_guess">猜答案</button>
                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                 <button class="btn_guess" id="btn_guess">猜!</button>
             </div>
@@ -37,20 +36,24 @@
         crossorigin="anonymous"></script>
 
         <script>
-            let p, container,random,ans,number ,p2,span,a,b;
+            let p, container,random,ans,number ,p2,span,a,b,input_arr;
             let arr=[];
             window.onload=function(){
                 box=document.getElementById('box');
-    
                 input =  document.querySelector("input");
                 btn_start=document.getElementById('start');
                 btn_reset=document.getElementById('reset');
                 
                 btn_lookans=document.getElementById('look_ans');
                 btn_guess=document.getElementById('btn_guess');
-    
+                
+                btn_lookans.disabled=true;
+                btn_reset.disabled=true;
+
                 btn_start.addEventListener("click",  ()=> {
                     randomnum();
+                    btn_lookans.disabled=false;
+                    btn_reset.disabled=false;
                 });
                 
                 btn_reset.addEventListener("click",  ()=> {
@@ -58,7 +61,6 @@
                 });
     
                 btn_lookans.addEventListener("click",()=>{
-
                     alert( `${arr.toString().replace(/,/g,"")}`);
                 })
                 function randomnum(){  
@@ -75,11 +77,32 @@
                         }
                     }
                 }
+                
                 btn_guess.addEventListener("click",()=>{
+                    input_arr=Array.from(input.value);
+                    for(let i=0;i<input_arr.length;i++)
+                    {
+                        if(input_arr[i]==input_arr[i+1]){
+                            alert("不可出現重複的數字")
+                            input.value="";
+                        }
+                    }
+                    if(input_arr.length!=4){
+                        alert("請輸入4個數字")
+                        input.value="";
+                    }
+                    else{
+                        showans();
+                        input.value=""
+                    }
+                })
+
+                function showans(){
                     a=0;
                     b=0;
-                    let input_arr=Array.from(input.value);
-                    for(let i=0;i<=3;i++)
+                    input_arr=Array.from(input.value);
+                    console.log(input_arr)
+                    for(let i=0;i<4;i++)
                     {
                         if(arr[i]==input_arr[i]){
                             a++;
@@ -104,7 +127,7 @@
                     input_num.innerText=input.value;
                     p.appendChild(input_num);
                     box.appendChild(p);
-                })
+                }
 
     
     
