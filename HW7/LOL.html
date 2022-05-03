@@ -2186,7 +2186,7 @@
                 lol= document.querySelectorAll(".card");
                 
                 lol.forEach((hero,index)=>{
-                    number=index;
+                    // number=index;
                     id=hero.querySelector(".card-title").innerText;
                     text=hero.querySelector(".card-body .card-text").innerText;
                     url=hero.querySelector(".card-img-top").src;
@@ -2204,12 +2204,16 @@
                 document.querySelector("#container").innerHTML = "";
             });
             
-            let LOLRole={
-                Title:['index','id','text','url'],
-                hero:{
-
-                }
-            }
+            // let LOLRole={
+            //     Title:['index','id','text','url'],
+            //     hero:{
+            //         number:index,
+            //         id:hero.querySelector(".card-title").innerText,
+            //         text:hero.querySelector(".card-body .card-text").innerText,
+            //         url:hero.querySelector(".card-img-top").src,
+            //     }
+            // }
+            // console.log(LOLRole.hero);
             btnListHero.addEventListener("click", function () {
                 if(heroArray.length==0){
                     alert("請先建立陣列資料");
