@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/896690462a.js" crossorigin="anonymous"></script>
+
+    <title>Hello, world!</title>
+    <style>
+        .navbar-collapse{
+            flex-grow: 0;
+            width: 89%;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light  bg-dark ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse m-auto text-center " id="navbarSupportedContent">
+            <a class="navbar-brand " href="#"><i class="fa-brands fa-apple text-white"></i></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto text-center">
+                <button class="bg-dark border border-0 " id="btn1" >
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">iPad mini</a>
+                    </li>
+                </button>
+                <button class="bg-dark border border-0 " id="btn2">
+                    <li class="nav-item">
+                        <a class="nav-link text-white ">iPad Air</a>
+                    </li>
+                </button>
+                <button class="bg-dark border border-0" id="btn3" >
+                    <li class="nav-item">
+                        <a class="nav-link text-white">iPad</a>
+                    </li>
+                </button>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        
+    </script>
+
+    <script >
+        let row,pic,main_text,color,color_img,appearences,size,wifi,air_money,btn3,img,air_size,btn_sz
+        let apple,applemini,air,normal;
+        let btn_mini,btn_ipadair,btn_ipad,container,space,Connectivity,coloring,total_price,price_title,price_text
+        const url = "https://raw.githubusercontent.com/linyign/FileStorage/main/allipad";
+
+        let mini=new XMLHttpRequest();
+        mini.onload = function () {
+            apple=JSON.parse(this.responseText);
+            console.log(this);
+            applemini=apple.ipadmini
+            air=apple.ipadAir
+            normal=apple.ipad
+        }
+        mini.open("GET", url);
+        mini.send();
+
+        window.onload=function(){
+            btn_mini=document.querySelector("#btn1")
+            btn_ipadair=document.querySelector("#btn2")
+            btn_ipad=document.querySelector("#btn3")
+            container=document.querySelector(".container")
+            total_price=document.createElement('div')
+            total_price.setAttribute("class","price px-0 py-2")
+            price_title=document.createElement('h2')
+            price_title.innerText=`價格`
+            total_price.appendChild(price_title)
+            price_text=document.createElement('p')
+            
+            btn_mini.addEventListener("click",  ()=> {
+                container.innerText=""
+                mini_left();
+                mini_right();
+            });
+
+            btn_ipadair.addEventListener("click",  ()=> {
+                container.innerText=""
+                left();
+                right();
+            });
+
+            btn_ipad.addEventListener("click", ()=> {
+                container.innerText=""
+                ipad_left();
+                ipad_right();
+            });
+            
+            function mini_left(){
+                row=document.createElement('div')
+                row.setAttribute("class","row d-flex ")
+                pic=document.createElement('div')
+                pic.setAttribute("class","col px-0 mx-2 my-auto")
+                img=document.createElement('img')
+                img.setAttribute("src","ipad-mini.png")
+                img.setAttribute("class","w-100")
+                pic.appendChild(img)
+                row.appendChild(pic)
+                container.appendChild(row)
+            }
+            function mini_right(){
+                main_text=document.createElement('div')
+                main_text.setAttribute("class","col px-0 ")
+                mini_colors()
+                mini_sz()
+                mini_nw()
+            }
+            
+            function left(){
+                row=document.createElement('div')
+                row.setAttribute("class","row d-flex ")
+                pic=document.createElement('div')
+                pic.setAttribute("class","col px-0 mx-2 my-auto")
+                img=document.createElement('img')
+                img.setAttribute("src","ipad-air-select.png")
+                img.setAttribute("class","w-100")
+                pic.appendChild(img)
+                row.appendChild(pic)
+                container.appendChild(row)
+            }
+            function right(){
+                main_text=document.createElement('div')
+                main_text.setAttribute("class","col px-0 ")
+                colors()
+                sz()
+                nw()
+            }
+            
+            function ipad_left(){
+                row=document.createElement('div')
+                row.setAttribute("class","row d-flex ")
+                pic=document.createElement('div')
+                pic.setAttribute("class","col px-0 mx-2")
+                img=document.createElement('img')
+                img.setAttribute("src","ipad.png")
+                img.setAttribute("class","w-75")
+                pic.appendChild(img)
+                row.appendChild(pic)
+                container.appendChild(row)
+            }
+            function ipad_right(){
+                main_text=document.createElement('div')
+                main_text.setAttribute("class","col px-0 mx-2")
+                ipad_colors()
+                ipad_sz()
+                ipad_nw()
+            }
+        }
+
+        //mini的顏色區
+        function  mini_colors(){
+            appearences=document.createElement('div')
+            appearences.setAttribute("class","appearences px-0  py-2")
+            color=document.createElement('h2')
+            color_img=document.createElement('div')
+            color_img.setAttribute("class","col")
+            color.innerText=`外觀`
+            for(let index=0;index<4;index++ ){
+                let air_color=document.createElement('img')
+                air_color.setAttribute("class","w-50")
+                let color_text=document.createElement('p')
+                color_text.setAttribute("class","text-dark")
+                color_text.innerText=`${applemini[index].color}`
+                air_color.setAttribute("src",`${applemini[index].picture}`)
+
+                let btn=document.createElement('button')
+                btn.setAttribute('class',"btn btn-outline-primary  mb-2 w-50")
+                btn.appendChild(air_color)
+                btn.appendChild(color_text)
+                color_img.appendChild(btn)
+                btn.addEventListener('click',()=>{
+
+                    img.setAttribute("src",`${applemini[index].applepic}`)
+                    coloring=applemini[index].color
+                    total()
+                })
+            }
+            appearences.appendChild(color)
+            appearences.appendChild(color_img)
+            main_text.appendChild(appearences)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        
+        //mini的容量區
+        function  mini_sz(){
+            size=document.createElement('div')
+            size.setAttribute("class","size px-0 py-2")
+            let GB=document.createElement('h2')
+            GB.innerText=`儲存裝置`
+            size.appendChild(GB)
+            for(let index=3;index<5;index++ ){
+                air_size=document.createElement('p')
+                air_size.setAttribute("class","Storage text-dark ")
+                air_size.innerText=`${applemini[index].storage}`
+                air_money=document.createElement('span')
+                air_money.setAttribute("class","Price text-dark")
+                air_money.innerText=`$ ${applemini[index].price} 起`
+                btn_sz=document.createElement('button')
+                btn_sz.setAttribute('class',"btn btn-outline-primary  w-50")
+                btn_sz.appendChild(air_size)
+                btn_sz.appendChild(air_money)
+                size.appendChild(btn_sz)
+                btn_sz.addEventListener('click',()=>{
+                    space=applemini[index].storage
+                    total()
+                })
+            }
+            main_text.appendChild(size)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+
+        //mini的網路區
+        function  mini_nw() {
+            wifi = document.createElement('div')
+            wifi.setAttribute("class", "wifi px-0 py-2 ")
+            let connection = document.createElement('h2')
+            connection.innerText = `連線能力`
+            wifi.appendChild(connection)
+            for (let index = 7; index < 9; index++) {
+                let air_wifi = document.createElement('p')
+                air_wifi.setAttribute("class", "text-dark")
+                air_wifi.innerText = `${applemini[index].network} `
+                btn3 = document.createElement('button')
+                btn3.setAttribute('class', "btn btn-outline-primary  w-50")
+                btn3.appendChild(air_wifi)
+                wifi.appendChild(btn3)
+                if (applemini[index].network=='Wi-Fi'){
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${14900} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                else{
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${19400} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                
+                btn3.addEventListener('click',()=>{
+                    Connectivity=applemini[index].network
+                    total()
+                })
+            }
+
+            main_text.appendChild(wifi)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        
+        //mini的價錢區
+        function total(){
+            let ipad=applemini.filter(x=>x.color==coloring && x.storage==space && x.network==Connectivity)
+            price_text.innerText=`${coloring} + ${space} + ${Connectivity} = ${ipad[0].price}`
+            total_price.appendChild(price_text)
+            main_text.appendChild(total_price)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        
+        //air的顏色區
+        function colors(){
+            appearences=document.createElement('div')
+            appearences.setAttribute("class","appearences px-0  py-2")
+            color=document.createElement('h2')
+            color_img=document.createElement('div')
+            color_img.setAttribute("class","col")
+            color.innerText=`外觀`
+            for(let index=0;index<5;index++ ){
+                let air_color=document.createElement('img')
+                air_color.setAttribute("class","w-50")
+                let color_text=document.createElement('p')
+                color_text.setAttribute("class","text-dark")
+                color_text.innerText=`${air[index].color}`
+                air_color.setAttribute("src",`${air[index].picture}`)
+
+                let btn=document.createElement('button')
+                btn.setAttribute('class',"btn btn-outline-primary me-5 mb-2 w-25")
+                btn.appendChild(air_color)
+                btn.appendChild(color_text)
+                color_img.appendChild(btn)
+                btn.addEventListener('click',()=>{
+
+                    img.setAttribute("src",`${air[index].applepic}`)
+                    coloring=air[index].color
+                    total1()
+                })
+            }
+            appearences.appendChild(color)
+            appearences.appendChild(color_img)
+            main_text.appendChild(appearences)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        //air的容量區
+        function sz(){
+            size=document.createElement('div')
+            size.setAttribute("class","size px-0 py-2")
+            let GB=document.createElement('h2')
+            GB.innerText=`儲存裝置`
+            size.appendChild(GB)
+            for(let index=4;index<6;index++ ){
+                air_size=document.createElement('p')
+                air_size.setAttribute("class","Storage text-dark ")
+                air_size.innerText=`${air[index].storage}`
+                air_money=document.createElement('span')
+                air_money.setAttribute("class","Price text-dark")
+                air_money.innerText=`$ ${air[index].price} 起`
+                btn_sz=document.createElement('button')
+                btn_sz.setAttribute('class',"btn btn-outline-primary  w-50")
+                btn_sz.appendChild(air_size)
+                btn_sz.appendChild(air_money)
+                size.appendChild(btn_sz)
+                btn_sz.addEventListener('click',()=>{
+                    space=air[index].storage
+                    total1()
+                })
+            }
+            main_text.appendChild(size)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        
+        //air的網路區
+        function nw() {
+            wifi = document.createElement('div')
+            wifi.setAttribute("class", "wifi px-0 py-2 ")
+            let connection = document.createElement('h2')
+            connection.innerText = `連線能力`
+            wifi.appendChild(connection)
+            for (let index = 9; index < 11; index++) {
+                let air_wifi = document.createElement('p')
+                air_wifi.setAttribute("class", "text-dark")
+                air_wifi.innerText = `${air[index].network} `
+                btn3 = document.createElement('button')
+                btn3.setAttribute('class', "btn btn-outline-primary  w-50")
+                btn3.appendChild(air_wifi)
+                wifi.appendChild(btn3)
+                if (air[index].network=='Wi-Fi'){
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${17900} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                else{
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${22900} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                
+                btn3.addEventListener('click',()=>{
+                    Connectivity=air[index].network
+                    total1()
+                })
+            }
+
+            main_text.appendChild(wifi)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        //air的價錢區
+        function total1(){
+            let ipad=air.filter(x=>x.color==coloring && x.storage==space && x.network==Connectivity)
+            price_text.innerText=`${coloring} + ${space} + ${Connectivity} = ${ipad[0].price}`
+            total_price.appendChild(price_text)
+            main_text.appendChild(total_price)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        
+        //ipad的顏色區
+        function ipad_colors(){
+            appearences=document.createElement('div')
+            appearences.setAttribute("class","appearences px-0  py-2")
+            color=document.createElement('h2')
+            color_img=document.createElement('div')
+            color_img.setAttribute("class","col")
+            color.innerText=`外觀`
+            for(let index=0;index<2;index++ ){
+                let air_color=document.createElement('img')
+                air_color.setAttribute("class","w-50")
+                let color_text=document.createElement('p')
+                color_text.setAttribute("class","text-dark")
+                color_text.innerText=`${normal[index].color}`
+                air_color.setAttribute("src",`${normal[index].picture}`)
+
+                let btn=document.createElement('button')
+                btn.setAttribute('class',"btn btn-outline-primary  w-50")
+                btn.appendChild(air_color)
+                btn.appendChild(color_text)
+                color_img.appendChild(btn)
+                btn.addEventListener('click',()=>{
+                    img.setAttribute("src",`${normal[index].applepic}`)
+                    coloring=normal[index].color
+                    total2()
+                })
+            }
+            appearences.appendChild(color)
+            appearences.appendChild(color_img)
+            main_text.appendChild(appearences)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        //ipad的容量區
+        function ipad_sz(){
+            size=document.createElement('div')
+            size.setAttribute("class","size px-0 py-2")
+            let GB=document.createElement('h2')
+            GB.innerText=`儲存裝置`
+            size.appendChild(GB)
+            for(let index=1;index<3;index++ ){
+                air_size=document.createElement('p')
+                air_size.setAttribute("class","Storage text-dark ")
+                air_size.innerText=`${normal[index].storage}`
+                air_money=document.createElement('span')
+                air_money.setAttribute("class","Price text-dark")
+                air_money.innerText=`$ ${normal[index].price} 起`
+                btn_sz=document.createElement('button')
+                btn_sz.setAttribute('class',"btn btn-outline-primary  w-50")
+                btn_sz.appendChild(air_size)
+                btn_sz.appendChild(air_money)
+                size.appendChild(btn_sz)
+                btn_sz.addEventListener('click',()=>{
+                    space=normal[index].storage
+                    total2()
+                })
+            }
+            main_text.appendChild(size)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        //ipad的網路區
+        function ipad_nw() {
+            wifi = document.createElement('div')
+            wifi.setAttribute("class", "wifi px-0 py-2 ")
+            let connection = document.createElement('h2')
+            connection.innerText = `連線能力`
+            wifi.appendChild(connection)
+            for (let index = 2; index < 4; index++) {
+                let air_wifi = document.createElement('p')
+                air_wifi.setAttribute("class", "text-dark")
+                air_wifi.innerText = `${normal[index].network} `
+                btn3 = document.createElement('button')
+                btn3.setAttribute('class', "btn btn-outline-primary  w-50")
+                btn3.appendChild(air_wifi)
+                wifi.appendChild(btn3)
+                if (normal[index].network=='Wi-Fi'){
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${10500} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                else{
+                    let net_money=document.createElement('span')
+                    net_money.setAttribute("class","text-dark")
+                    net_money.innerText=`$ ${14500} 起`
+                    btn3.appendChild(net_money)
+                    wifi.appendChild(btn3)
+                }
+                btn3.addEventListener('click',()=>{
+                    Connectivity=normal[index].network
+                    total2()
+                })
+            }
+            main_text.appendChild(wifi)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+        //ipad的價錢區
+        function total2(){
+            let ipad=normal.filter(x=>x.color==coloring && x.storage==space && x.network==Connectivity)
+            price_text.innerText=`${coloring} + ${space} + ${Connectivity} = ${ipad[0].price}`
+            total_price.appendChild(price_text)
+            main_text.appendChild(total_price)
+            row.appendChild(main_text)
+            container.appendChild(row)
+        }
+
+    </script>
+</body>
+
+</html>
