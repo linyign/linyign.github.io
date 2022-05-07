@@ -25,33 +25,33 @@
                 <input type="text " class="form-control"  aria-label="Recipient's username with two button addons">
             </div>
             <div class="col-8 m-auto mb-2 ">
-                <button class="btn btn-outline-secondary btn-danger text-white col-4" id="zero" type="button">C</button>
+                <button class="btn btn-outline-secondary btn-danger text-white col-4" id="reset" type="button">C</button>
                 <button class="btn btn-outline-secondary btn-warning  text-dark col-2" id="del" type="button">></button>
-                <button class="btn btn-outline-secondary btn-primary text-white col-2" id="add" type="button">+</button>
+                <button class="btn btn-outline-secondary btn-primary text-white col-2" id="op" type="button">+</button>
             </div>
             <div class="col-8 m-auto mb-2 ">
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white "id="num" type="button">1</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num2" type="button">2</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num3" type="button">3</button>
-                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="reduce" type="button">-</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">1</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">2</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num" type="button">3</button>
+                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="op" type="button">-</button>
             </div>
             <div class="col-8 m-auto mb-2">
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num4" type="button">4</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num5" type="button">5</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num6" type="button">6</button>
-                <button class="btn btn-outline-secondary col-2 btn-primary text-white  " id="mult" type="button">*</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">4</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">5</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">6</button>
+                <button class="btn btn-outline-secondary col-2 btn-primary text-white  " id="op" type="button">*</button>
             </div>
             <div class="col-8 m-auto mb-2">
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num7" type="button">7</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num8" type="button">8</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num9" type="button">9</button>
-                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="Div" type="button">/</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num" type="button">7</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num" type="button">8</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white "  id="num" type="button">9</button>
+                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="op" type="button">/</button>
             </div>
             <div class="col-8 m-auto mb-2">
                 <button class="btn btn-outline-secondary col-2 btn-success text-white " id="ans" type="button">=</button>
-                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num0" type="button">0</button>
+                <button class="btn btn-outline-secondary col-2 btn-dark text-white " id="num" type="button">0</button>
                 <button class="btn btn-outline-secondary col-2 btn-info text-dark" id="dot" type="button">.</button>
-                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="per"  type="button">%</button>
+                <button class="btn btn-outline-secondary col-2 btn-primary text-white " id="op"  type="button">%</button>
             </div>
         </div>
     </div>
@@ -61,33 +61,31 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script>
-        let len,op;
-        let input_txt=[];
+        let len;
+        let L='',op=''
+        let  operation=[
+            {op:'+', calc :(a,b) => a+b },
+            {op:'-', calc :(a,b) => a-b },
+            {op:'*', calc :(a,b) => a*b },
+            {op:'/', calc :(a,b) => a/b },
+            {op:'%', calc :(a,b) => a%b },
+        ]
         window.onload=function(){
             input =  document.querySelector("input");
-            btnZero = document.getElementById("zero");
+            btnreset = document.getElementById("reset");
             btndel = document.getElementById("del");
-            btnadd = document.getElementById("add");
-            btnreduce = document.getElementById("reduce");
-            btnmult = document.getElementById("mult");
-            btndiv = document.getElementById("Div");
-            btnper = document.getElementById("per");
-            btnnum = document.getElementById("num");
-            btnnum2 = document.getElementById("num2");
-            btnnum3 = document.getElementById("num3");
-            btnnum4 = document.getElementById("num4");
-            btnnum5 = document.getElementById("num5");
-            btnnum6 = document.getElementById("num6");
-            btnnum7 = document.getElementById("num7");
-            btnnum8= document.getElementById("num8");
-            btnnum9 = document.getElementById("num9");
-            btnnum0 = document.getElementById("num0");
+            btnop= document.querySelectorAll("#op");
+            
+            bun_num=document.querySelectorAll('#num')
             btnans = document.getElementById("ans");
             btndot = document.getElementById("dot");
 
-            btnZero.addEventListener("click",  ()=> {
+
+            btnreset.addEventListener("click",  ()=> {
                 document.querySelector("input").innerTxt;
                 input.value = "";
+                L=''
+                op=''
             });
 
             btndel.addEventListener("click", ()=> {
@@ -98,70 +96,36 @@
                 // let str="ASD";
                 // let a=str.slice(0,str.length-1);
             });
-
-            btnadd.addEventListener("click",  (event)=>{
-                sym();
-            });
-            btnreduce.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnmult.addEventListener("click", (event) =>{
-                sym();
-            });
-            btndiv.addEventListener("click",  (event)=> {
-                sym();
-            });
-
-            btnper.addEventListener("click",  (event)=> {
-                sym();
-            });
-            btnnum.addEventListener("click",  (event)=> {
-                sym();
-            });
-            btnnum2.addEventListener("click",  (event)=> {
-                sym();
-            });
-            btnnum3.addEventListener("click",  (event)=> {
-                sym();
-            });
-            btnnum4.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum5.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum6.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum7.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum8.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum9.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnnum0.addEventListener("click", (event)=> {
-                sym();
-            });
-            btnans.addEventListener("click",  (event)=> {
-                // sym();
-                input.value=eval(input.value);
-            });
-
-            btndot.addEventListener("click",  (event)=> {
-                if(input.value.length==0){
-                    input.value+=`0${event.target.innerText}`;
+            bun_num.forEach(btn => {
+                btn.onclick = () => {
+                    input.value += btn.innerHTML
                 }
-                else{
-                    sym();
-                }
+            })
+            btnop.forEach(btns_op=>{
+                btns_op.addEventListener("click",()=>{
+                    L = parseFloat(input.value)
+                    input.value = ""
+                    op = btns_op.innerHTML
+                })
+            })
+            
+            btnans.addEventListener("click",  ()=> {
+                let R=parseFloat(input.value)
+                let operations=operation.find(x=>x.op==op)
+                let equal=operations.calc(L,R)
+                input.value = ""
+                L = ''
+                op = ''
+                input.value= equal
             });
-            function sym(){
-                let add=event.target.innerText;
-                input.value += add;
-            }
+
+            btndot.addEventListener("click",  ()=> {
+                if(input.value.includes('.'))
+                    return
+                if(input.value=='')
+                    input.value='0'
+                input.value+=btndot.innerHTML
+            });
         }
     </script>
 
