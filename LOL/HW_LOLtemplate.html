@@ -39,15 +39,15 @@
             background-color: #ffbf67;
         }
         .card{
-            height: 600px;
+            height: 690px;
             position: relative;
         }
-        .card-body #exampleModal{
+        .card-body .detail{
             position: absolute;
             bottom: 0%;
             left:25%;
         }
-        .card-body #videoModal{
+        .card-body .video{
             position: absolute;
             bottom: 0%;
             right:25%;
@@ -117,8 +117,8 @@
                 <div class="card-body ">
                     <h5 class="card-title">標題</h5>
                     <p class="card-text">詳細</p>
-                    <a href="#" id="exampleModal" class="btn btn-primary my-2 "data-toggle="modal" data-target="#exampleModal">詳細內容</a>
-                    <a href="#" id="videoModal" class="btn btn-danger my-2"  data-toggle="modal" data-target="#videoModal">影片</a>
+                    <a href="#"  class="btn btn-primary my-2 detail"data-toggle="modal" data-target="#exampleModal">詳細內容</a>
+                    <a href="#"  class="btn btn-danger my-2 video"  data-toggle="modal" data-target="#videoModal">影片</a>
                 </div>
             </div>
         </div>
@@ -215,7 +215,8 @@
         }
         function setModel(title, imgurl, hp,move,cloth,power,att) {
             let model = document.querySelector("#exampleModal")
-            model.querySelector("h5").innerText = title
+            console.log(title)
+            model.querySelector(".modal-title").innerText = title
             model.querySelector("#pizzaImage").src = imgurl
             model.querySelector("#hp").innerText = `HP:${hp}`
             model.querySelector("#movespeed").innerText = `Move Speed:${move}`
